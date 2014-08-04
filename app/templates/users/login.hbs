@@ -1,0 +1,32 @@
+<section class="login">
+  <div class="barcelona-logo"></div>
+  <form role="form" class="login-form" {{action "authenticate" on="submit"}}>
+    <div class="form-group">
+      {{input type="text" placeholder="Usuario" name="InputUsername" class="form-control input-lg"}}
+    </div>
+
+    <div class="form-group">
+      {{input type="password" placeholder="Contraseña" name="InputPassword" class="form-control input-lg"}}
+    </div>
+
+    <button type="submit" class="btn btn-block btn-lg btn-default btn-enter">Ingrese</button>
+  </form>
+
+<hr />
+
+  <a class="btn btn-block btn-social btn-lg btn-facebook" {{action "authenticate"}}>
+    <i class="fa fa-facebook"></i>
+    Igrese con Facebook
+  </a>
+
+  <a class="btn btn-block btn-social btn-lg btn-google-plus" {{action "authenticate"}}>
+    <i class="fa fa-google-plus"></i>
+    Ingrese con Google
+  </a>
+
+<div class="social-login">
+  <span class="signup">{{#link-to 'users.create'}}Cree su cuenta{{/link-to}}</span>
+  |
+  <span class="forgot-password">{{#link-to 'users.recover'}}¿Olvidó su contraseña?{{/link-to}}</span>
+</div>
+</section>

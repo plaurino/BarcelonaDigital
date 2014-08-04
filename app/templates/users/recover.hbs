@@ -1,0 +1,9 @@
+<form role="form">
+  <div class="form-group">
+    <label for="InputEmail">Ingresa tu e-mail:</label>
+    {{input type="email" class="form-control" placeholder="Email"}}
+  </div>
+
+  <button type="submit" class="btn btn-default">Recuperar contraseña</button>
+</form>
+<span class="signup">{{#link-to 'users.login'}}Ingresar con una cuenta existente{{/link-to}}</span>

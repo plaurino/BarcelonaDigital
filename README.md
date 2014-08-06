@@ -5,6 +5,7 @@ This README outlines the details of collaborating on this Ember application.
 ## Installation
 
 * `git clone` this repository
+* `npm -g install ember-cli` (you may need to run this as sudo)
 * `npm install`
 * `bower install`
 

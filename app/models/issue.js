@@ -15,28 +15,22 @@ Issue.reopenClass({
       "id" : "53b3791643875a10e359feee",
       "number" : "250",
       "title" : "Peron Aniversario",
-      "assets" : {
-          "cover" : "http://link.to/250/cover.png",
-          "main" : "http://link.to/250/magazine.pdf"
-      }
+      "cover" : "http://127.0.0.1:4200/311/tapa.png",
+      "main" : "http://127.0.0.1/311/"
     },
     {
       "id" : "53b3792643875a10e359feef",
       "number" : "251",
       "title" : "Ortos rotos",
-      "assets" : {
-          "cover" : "http://link.to/251/cover.png",
-          "main" : "http://link.to/251/magazine.pdf"
-      }
+      "cover" : "http://127.0.0.1:4200/311/tapa.png",
+      "main" : "http://127.0.0.1/311/"
     },
     {
       "id" : "53b3795543875a10e359fef0",
       "number" : "252",
       "title" : "Vaselinha",
-      "assets" : {
-          "cover" : "http://link.to/252/cover.png",
-          "main" : "http://link.to/252/magazine.pdf"
-      }
+      "cover" : "http://127.0.0.1:4200/311/tapa.png",
+      "main" : "http://127.0.0.1/311/"
     }
   ]
 });

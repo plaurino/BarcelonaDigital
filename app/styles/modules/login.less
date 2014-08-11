@@ -1,31 +1,112 @@
 .login-body {
-  background-color: @BarcelonaBg;
+    background-color: #f9f9f9;
+
+    .container-fluid {
+        // max-width: 980px;
+    }
+
+    .form-control {
+        font-weight: 300;
+    }
 }
 
-.btn-enter {
-  background-color: #E6E6E6;
-  width: 50%;
-  margin-left: 25%;
-  color: #000;
-}
-
-.barcelona-logo {
-  width: 100%;
-  height: 131px;
-  background-image: url('/assets/images/logo.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
+.login {
+    margin-top: 60px;
 }
 
 .social-login {
-  width: 100%;
-  margin-top: 20px;
-  font-size: 1.7rem;
-  text-align: center;
+    margin-bottom: 65px;
 }
 
-.social-login a {
-  color: #FF00FF;
-  font-weight: bold;
+.btn-enter {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.btn-social {
+    margin-bottom: (@grid-gutter-width / 2);
+
+    &.btn-facebook,
+    &.btn-google-plus {
+        border: 0;
+    }
+}
+
+.login-assistance {
+    float: left;
+    font-size: 13px;
+}
+
+
+.separator {
+    position: absolute;
+    .size(100%, 15px);
+    margin-top: -38px;
+    margin-left: (@grid-gutter-width / -2);
+    line-height: 15px;
+    text-align: center;
+    color: #999;
+
+    &:before,
+    &:after {
+        position: absolute;
+        top: 50%;
+        display: block;
+        .size(38%, 1px);
+        background: #ddd;
+        content: "";
+    }
+
+    &:before {
+        left: (@grid-gutter-width / 2);
+    }
+
+    &:after {
+        right: (@grid-gutter-width / 2);
+    }
+}
+
+@media (min-width: @screen-sm) {
+    .login {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        .translate(-50%,0);
+    }
+
+    .social-login {
+        padding-right: 50px;
+    }
+
+    .custom-login {
+        padding-left: 50px;
+    }
+
+    .separator {
+        left: 0;
+        .size(15px, 100%);
+        padding-top: 17%;
+        margin: 0;
+
+        &:before,
+        &:after {
+            .size(1px, 40%);
+            right: 0;
+            left: 50%;
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    .btn-enter {
+        width: 40%;
+        float: right;
+    }
 }

@@ -1,25 +1,38 @@
 <section class="collection">
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <a class="navbar-brand">
-        Barcelona Digital
-      </a>
-    </div>
-  </nav>
-  {{#each this }}
+    <nav class="barcelona-nav navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand bracelona-logo" href="#">Barcelona Digital</a>
+            </div>
+        </div>
+    </nav>
+    {{#each this }}
     <h1>{{ name }}</h2>
-    <ul class="container-fluid">
-      <li class="magazine col-xs-5 next">
-        Próximo:
-        <span class="days">10 días</span>
-      </li>
-    {{#each issues }}
-      <li class="magazine col-xs-2">
-        {{#link-to 'issue' this}}
-          <img class="cover" {{bind-attr src=cover}} {{bind-attr alt=numberTitle}} />
-        {{/link-to}}
-      </li>
-    {{/each}}
+    <ul class="magazine-display">
+        <li class="magazine next">
+            <img class="cover" src="http://104.131.243.228:8081/311/tapa.jpg" />
+            <div class="next-in">
+                Próximo:
+                <span class="days">10 días</span>
+            </div>
+        </li>
+        {{#each issues }}
+        <li class="magazine">
+            {{#link-to 'issue' this}}
+              <img class="cover" {{bind-attr src=cover}} {{bind-attr alt=numberTitle}} />
+              <div class="magazine-info">
+                  <h2 class="h3">Revista 22 Sept.</h2>
+              </div>
+            {{/link-to}}
+
+        </li>
+        {{/each}}
     </ul>
-  {{/each}}
+    {{/each}}
 </section>

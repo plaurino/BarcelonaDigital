@@ -1,0 +1,25 @@
+<section class="collection">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <a class="navbar-brand">
+        Barcelona Digital
+      </a>
+    </div>
+  </nav>
+  {{#each this }}
+    <h1>{{ name }}</h2>
+    <ul class="container-fluid">
+      <li class="magazine col-xs-5 next">
+        Próximo:
+        <span class="days">10 días</span>
+      </li>
+    {{#each issues }}
+      <li class="magazine col-xs-2">
+        {{#link-to 'issue' this}}
+          <img class="cover" {{bind-attr src=cover}} {{bind-attr alt=numberTitle}} />
+        {{/link-to}}
+      </li>
+    {{/each}}
+    </ul>
+  {{/each}}
+</section>

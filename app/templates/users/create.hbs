@@ -1,24 +1,18 @@
+{{#if isSending}}
+Enviando...
+{{else}}
 <form role="form" {{action "create" on="submit"}}>
   <div class="form-group">
-    <label for="InputUsername">Nombre de usuario:</label>
-    {{input type="text" placeholder="Nombre de usuario" name="InputUsername" class="form-control"}}
-  </div>
+    <div class="form-group">
+      <label for="InputEmail">E-mail:</label>
+      {{input type="email" value=username id="username" placeholder="hola@ejemplo.com" name="InputEmail" class="form-control"}}
+    </div>
 
-  <div class="form-group">
-    <label for="InputPassword">Contraseña:</label>
-    {{input type="password" placeholder="Contraseña" name="InputPassword" class="form-control"}}
-  </div>
-
-  <div class="form-group">
-    <label for="InputPassword">E-mail:</label>
-    {{input type="email" placeholder="hola@ejemplo.com" name="InputEmail" class="form-control"}}
-  </div>
-
-  <div class="form-group">
-    <label for="InputIdNumber">DNI/LE/LC/CI/Pasaporte</label>
-    {{input type="string" placeholder="12.345.678" name="InputIdNumber" class="form-control"}}
-  </div>
-
+    <div class="form-group">
+      <label for="InputPassword">Contraseña:</label>
+      {{input type="password" value=password id="password" placeholder="Contraseña" name="InputPassword" class="form-control"}}
+    </div>
   <button type="submit" class="btn btn-default">Crear</button>
 </form>
 <span class="signup">{{#link-to 'users.login'}}Ingresar con una cuenta existente{{/link-to}}</span>
+{{/if}}

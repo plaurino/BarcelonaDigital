@@ -14,6 +14,7 @@
     "ember-cli-test-loader": "rjackson/ember-cli-test-loader#0.0.2",
     "pdfjs": "~1.0.473",
     "bootstrap-social-buttons": "~1.0.0",
-    "bootstrap-social": "~4.5.1"
+    "bootstrap-social": "~4.5.1",
+    "ladda": "~0.9.4"
   }
 }

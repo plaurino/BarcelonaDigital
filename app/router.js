@@ -7,10 +7,11 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource('users', function() {
     this.route('create');
-    this.route('login', {
-      path: '/login'
-    });
+    this.route('login');
     this.route('recover');
+    this.resource('subscription', function() {
+      this.route('add');
+    });
   });
 
   this.resource('collections', function() {

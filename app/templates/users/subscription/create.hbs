@@ -1,0 +1,10 @@
+<form {{action "pay" on="submit"}} method="post" id="form-pagar-mp">
+  <p>Card number: <input data-checkout="cardNumber" type="text" /></p>
+  <p>CVC: <input data-checkout="securityCode" type="text"/></p>
+  <p>MM: <input data-checkout="cardExpirationMonth" type="text"/></p>
+  <p>YYYY: <input data-checkout="cardExpirationYear" type="text"/></p>
+  <p>Card holder name: <input data-checkout="cardholderName" type="text"/></p>
+  <p>Id document number: <input data-checkout="docNumber" type="text"/></p>
+  <input data-checkout="docType" type="hidden" value="DNI"/>
+  <p><input type="submit" value="Make payment"></p>
+</form>

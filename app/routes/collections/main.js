@@ -9,6 +9,8 @@ export default Ember.Route.extend({
   },
   actions: {
     error: function() {
+      window.Ladda.stopAll();
+      this.controllerFor('users.login').set('login-error', true);
       this.transitionTo('users.login');
     }
   }

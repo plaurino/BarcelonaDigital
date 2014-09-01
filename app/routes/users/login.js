@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   activate: function(){
-    Ember.$('body').addClass('login-body');
+    // redirect if the user is logged in.
   }
 });

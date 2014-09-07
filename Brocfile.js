@@ -17,8 +17,10 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-app.import('vendor/ladda/dist/spin.min.js');
-app.import('vendor/ladda/dist/ladda.min.js');
-app.import('vendor/ladda/dist/ladda.min.css');
+app.import('bower_components/ladda/dist/spin.min.js');
+app.import('bower_components/ladda/dist/ladda.min.js');
+app.import('bower_components/ladda/dist/ladda-themeless.min.css');
+
+
 
 module.exports = app.toTree();

@@ -1,0 +1,15 @@
+<div class="issue">
+  {{#each page in pages}}
+    <div class="page">
+      <img {{bind-attr src=page.url}} />
+    </div>
+  {{/each}}
+</div>
+
+<menu class="controls">
+  <menuitem class="zoom-in"><button>Zoom-in</button></menuitem>
+  <menuitem class="zoom-out"><button>Zoom-out</button></menuitem>
+  <menuitem class="next-page"><button>Next</button></menuitem>
+  <menuitem class="prev-page"><button>Prev</button></menuitem>
+</menu>
+{{#link-to 'collections.main'}}Back to collections{{/link-to}}

@@ -4,3 +4,16 @@
     background: url('/assets/images/logo.png') no-repeat center center;
     background-size: contain;
 }
+
+.hide-with-transform {
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  transition: transform 0.5s ease 0s;
+}
+
+.reveal-with-transform {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -webkit-animation: reveal 500ms ease 0s;
+  animation: reveal 500ms ease 0s;
+}

@@ -4,6 +4,7 @@ var Issue = DS.Model.extend({
   title: DS.attr('string'),
   cover: DS.attr('string'),
   main: DS.attr('string'),
+  pages: DS.hasMany('page'),
   numberTitle: function() {
     return this.get('number') + " - " + this.get('title');
   }.property('number', 'title')

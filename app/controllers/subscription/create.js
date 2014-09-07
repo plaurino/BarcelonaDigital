@@ -1,9 +1,5 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  actions: {
-    pay: function() {
-
-    }
-  }
+  types: ['3 meses', '6 meses']
 });

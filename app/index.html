@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Luke</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{BASE_TAG}}
 
@@ -13,15 +13,12 @@
     <link rel="stylesheet" href="assets/luke.css">
   </head>
   <body>
-    <script>
-      window.LukeENV = {{ENV}};
-      window.EmberENV = window.LukeENV.EmberENV;
-    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/luke.js"></script>
     <script>
+      window.LukeENV = require('luke/config/environment')['default'];
+      window.EmberENV = window.LukeENV.EmberENV;
       window.Luke = require('luke/app')['default'].create(LukeENV.APP);
     </script>
-    <script type="text/javascript" src="https://secure.mlstatic.com/org-img/checkout/custom/1.0/checkout.js"></script>
   </body>
 </html>

@@ -1,0 +1,23 @@
+.sidebar-wrapper {
+  z-index: 1000;
+  position: absolute;
+  top: 65px;
+  left: 250px;
+  width: 250px;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: none repeat scroll 0% 0% @gray-darker;
+  @media (max-width: @screen-sm) {
+    .hide-with-transform
+  }
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0px;
+  width: 250px;
+  margin: 0px;
+  padding: 0px;
+  list-style: outside none none;
+}

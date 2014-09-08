@@ -20,6 +20,8 @@ Router.map(function() {
       path: 'view/:id'
     });
   });
+  this.route('issues');
+  this.route('issues/view');
 });
 
 export default Router;

@@ -2,6 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   activate: function(){
-    // redirect if the user is logged in.
+    if (window.localStorage.getItem('user-token')) {
+      this.transitionTo('collections.main');
+    }
   }
 });

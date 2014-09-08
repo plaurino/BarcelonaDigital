@@ -1,5 +1,6 @@
 <section class="collection">
-    {{partial 'sidebars/subscriptions'}}
+      {{log 'eso: ' controller.subscription.active}}
+    {{render 'sidebars/subscriptions' controller.subscription}}
 
     {{#each}}
       <h1>{{ name }}</h2>

@@ -1,12 +1,32 @@
 .barcelona-nav {
     .bracelona-logo {
-      .hide-text();
         .brand-logo(220px;100%);
         margin-left: (@grid-gutter-width / 2);
-
+        text-indent: -9999px;
     }
 
     > .container-fluid .bracelona-logo {
         margin-left: (@grid-gutter-width / 2);
+    }
+
+    .fa-sign-out {
+        width: 75px;
+        height: 65px;
+        line-height: 65px;
+        background: none;
+        border: 0;
+        outline: 0;
+        color: #f1f1f1;
+        font-size: 30px;
+
+        &:hover {
+            color: @magenta;
+        }
+
+        &:active,
+        &:hover,
+        &:focus {
+            outline: 0;
+        }
     }
 }

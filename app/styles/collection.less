@@ -1,19 +1,35 @@
 .collection-body {
-    background-color: #f9f9f9;
+
+    .navbar .container-fluid {
+        max-width: 1490px;
+    }
 
     .collection {
-        margin-top: 50px;
+        max-width: 1490px;
+        margin: 40px auto;
+
+
+        .magazine-display {
+            padding: 0 10px;
+            margin: 0;
+            .clearfix();
+
+            @media (min-width: 1025px) {
+                padding: 0 235px 0 20px;
+            }
+        }
+
         .magazine {
             float: left;
             .size(50%, auto);
             padding: 10px;
             list-style: none;
 
-
             > a {
                 position:relative;
                 display: block;
                 overflow: hidden;
+                box-shadow: 4px 3px 2px rgba(0,0,0,.3);
             }
 
             .cover {
@@ -21,27 +37,20 @@
                 width: 100%;
                 height: auto;
                 margin: 0 auto;
-
             }
 
             .magazine-info {
                 position: absolute;
                 top: 100%;
-                .size(100%, 100px);
+                .size(100%, 110px);
                 padding: 5px 10px;
                 background: fade(#222,80%);
                 color: cyan;
-                text-transform: uppercase;
                 opacity: 0;
                 .transition(all 180ms ease-out);
             }
 
             &:hover {
-                .cover {
-                    // z-index: 1;
-                    // .scale(1.1);
-                }
-
                 .magazine-info {
                     opacity: 1;
                     .translate(0, -100%);
@@ -52,7 +61,7 @@
                 position: relative;
 
                 .cover {
-                    opacity:.15;
+                    opacity:.7;
                     border: 10px solid cyan;
                 }
 
@@ -81,17 +90,15 @@
 
             @media (min-width: @screen-sm) {
                 width: 100% / 4;
-                margin-left: 250px;
             }
 
             @media (min-width: @screen-md) {
-                width: 100% / 7;
+                width: 100% / 5;
             }
-        }
 
-        .magazine-display {
-            padding: 0;
-            margin: 0;
+            @media (min-width: (@screen-lg + 1)) {
+                width: 100% / 6;
+            }
         }
     }
 

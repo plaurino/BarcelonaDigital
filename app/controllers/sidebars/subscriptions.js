@@ -8,7 +8,7 @@ export default Ember.ObjectController.extend({
       var socket = window.io('http://0.0.0.0:3001');
 
       socket.emit('waiting', {
-        id: 2
+        id: 2      
       });
 
       socket.on('payment-status', function(data) {

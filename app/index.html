@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="assets/luke.css">
   </head>
   <body>
+    <script>
+      window.EmberENV = {{EMBER_ENV}};
+    </script>
     <script src="assets/vendor.js"></script>
     <script src="assets/luke.js"></script>
     <script>
-      window.LukeENV = require('luke/config/environment')['default'];
-      window.EmberENV = window.LukeENV.EmberENV;
-      window.Luke = require('luke/app')['default'].create(LukeENV.APP);
+      window.Luke = require('luke/app')['default'].create({{APP_CONFIG}});
     </script>
   </body>
 </html>

@@ -1,12 +1,11 @@
 <section class="collection">
-      {{log 'eso: ' controller.subscription.active}}
+
     {{render 'sidebars/subscriptions' controller.subscription}}
 
     {{#each}}
       <h1>{{ name }}</h2>
       <ul class="magazine-display">
           <li class="magazine next">
-              <img class="cover" src="http://localhost:8000/311/311.jpeg" />
               <div class="next-in">
                   Próximo:
                   <span class="days">10 días</span>
@@ -20,7 +19,6 @@
                       <h2 class="h3">Revista 22 Sept.</h2>
                   </div>
                 {{/link-to}}
-
             </li>
           {{/each}}
       </ul>

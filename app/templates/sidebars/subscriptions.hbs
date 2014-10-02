@@ -1,10 +1,10 @@
 <div class="sidebar-wrapper">
   <menu>
     {{#if active}}
-      <menuitem>Subscripción por tres meses</menuitem>
+      <menuitem>Suscripción activa</menuitem>
     {{else}}
       {{#if mp_payment_link}}
-        <button class="btn btn-lg btn-suscribe" {{bind-attr href=mp_payment_link}} target="_blank" {{action 'subscribe_mp'}}>Suscribirse por 3 meses</button>
+        <menuitem class="btn btn-lg btn-suscribe" {{bind-attr href=mp_payment_link}} target="_blank" {{action 'subscribe_mp'}}>Suscribirse</menuitem>
       {{/if}}
     {{/if}}
   </menu>

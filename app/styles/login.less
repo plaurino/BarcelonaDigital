@@ -10,12 +10,20 @@
     }
 }
 
+.form-group {
+  margin-bottom: 3px;
+}
+
+.input-lg {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
 /*.login {
     margin-top: 60px;
 }*/
 
 .social-login {
-    margin-bottom: 65px;
+    margin-bottom: 10%;
 }
 
 .btn-enter {
@@ -25,45 +33,54 @@
 
 .btn-social {
     margin-bottom: (@grid-gutter-width / 2);
+    padding: 8px 0px;
 
-    &.btn-facebook,
+    &.btn-facebook{
+      border-color: darken(#2d4373, 10%);
+    }
+
     &.btn-google-plus {
-        border: 0;
+      border-color: darken(#c23321, 10%);
+    }
+    
+    &.btn-facebook:active,
+    &.btn-google-plus:active {
+      border-color: transparent;
     }
 }
 
 .login-assistance {
-    float: left;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
 .separator {
-    position: absolute;
+ /*   position: absolute;
     .size(100%, 15px);
     margin-top: -38px;
     margin-left: (@grid-gutter-width / -2);
-    line-height: 15px;
-    text-align: center;
-    color: #999;
-
-    &:before,
-    &:after {
+    line-height: 15px;*/
+      display: block;
+      margin: 5px 0px;
+      text-align: center;
+      color: #999;
+      
+/*    &:before {
         position: absolute;
         top: 50%;
         display: block;
-        .size(38%, 1px);
+        .size(100%, 2px);
         background: #ddd;
         content: "";
-    }
+    }*/
 
-    &:before {
+/*    &:before {
         left: (@grid-gutter-width / 2);
     }
 
     &:after {
         right: (@grid-gutter-width / 2);
-    }
+    }*/
 }
 
 .login-error {
@@ -71,7 +88,23 @@
   color: @brand-danger;
   -webkit-animation: pull-down 200ms;
   animation: pull-down 200ms;
+  margin: 5% 0;
+  background: ligther(@brand-danger, 70%);
 }
+
+.forgot-password {
+  display: block;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.signup {
+  display: block;
+  margin-top: 15%;
+  text-align: center;
+}
+
+
 
 @media (min-width: @screen-sm) {
     .login {
@@ -89,7 +122,8 @@
         padding-left: 50px;
     }*/
 
-    .separator {
+/*    .separator {
+
         left: 0;
         .size(15px, 100%);
         padding-top: 17%;
@@ -110,10 +144,11 @@
             top: auto;
             bottom: 0;
         }
-    }
 
-    .btn-enter {
+    }*/
+
+/*    .btn-enter {
         width: 40%;
         float: right;
-    }
+    }*/
 }

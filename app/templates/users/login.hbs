@@ -1,7 +1,7 @@
 <section class="login">
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-5">
               <div class="social-login">
                 <a class="btn btn-block btn-social btn-lg btn-facebook" {{action "authenticate"}}>
                     <i class="fa fa-facebook"></i>
@@ -15,11 +15,7 @@
               </div>
               <div class="custom-login">
                 {{!-- <span class="separator">ó</span> --}}
-
-                {{#if login-error}}
-                  <span class="login-error">Error: usuario o contraseña incorrectos</span>
-                {{/if}}
-
+                <span class="separator">o ingresa con una cuenta de correo</span>
                 <form role="form" class="login-form" {{action "authenticate" on="submit"}}>
                     <div class="form-group">
                       {{input type="email" placeholder="Usuario" name="InputUsername" value=username class="form-control input-lg"}}
@@ -29,17 +25,20 @@
                       {{input type="password" placeholder="Contraseña" name="InputPassword" value=password class="form-control input-lg"}}
                     </div>
 
-                    <button type="submit" class="ladda-button btn btn-block btn-lg btn-primary btn-enter" data-style="zoom-out">
+                    {{#if login-error}}
+                      <span class="login-error">Verifica que tu usuario o contraseña sean los correctos</span>
+                    {{/if}}
+
+                    <button type="submit" class="ladda-button btn btn-block btn-lg btn-cyan" data-style="zoom-out">
                         <span class="ladda-label">Ingrese</span>
                         <span class="ladda-spinner"></span>
                     </button>
-
                     <div class="login-assistance">
-                      <span class="signup">
-                        {{#link-to 'users.create'}}Cree su cuenta{{/link-to}}
-                      </span>
                       <span class="forgot-password">
                         {{#link-to 'users.recover'}}¿Olvidó su contraseña?{{/link-to}}
+                      </span>
+                      <span class="signup">
+                        {{#link-to 'users.create'}}¿No tienes cuenta? Regístrate{{/link-to}}
                       </span>
                     </div>
                 </form>

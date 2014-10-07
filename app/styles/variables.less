@@ -22,6 +22,7 @@
 
 //users-barcelona	
 @cyan-header:			darken(#2CA396, 5%);
+@nav-hover: 			rgba(18,214,231,.2);
 
 //== Scaffolding
 //
@@ -109,7 +110,8 @@
 @border-radius-small:       0;
 
 //** Global color for active items (e.g., navs or dropdowns).
-@component-active-color:    #fff;
+//barcelona
+@component-active-color:    @nav-hover;
 //** Global background color for active items (e.g., navs or dropdowns).
 @component-active-bg:       @brand-primary;
 
@@ -403,12 +405,12 @@
 
 //=== Shared nav styles
 @nav-link-padding:                          10px 15px;
-@nav-link-hover-bg:                         @gray-lighter;
+@nav-link-hover-bg:                         @nav-hover;
 
 @nav-disabled-link-color:                   @gray-light;
 @nav-disabled-link-hover-color:             @gray-light;
 
-@nav-open-link-hover-color:                 #fff;
+@nav-open-link-hover-color:                 @nav-hover;
 
 //== Tabs
 @nav-tabs-border-color:                     #ddd;

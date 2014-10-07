@@ -5,17 +5,18 @@
     }
 
     .collection {
-        max-width: 1490px;
-        margin: 40px auto;
+        max-width: 100%;
+        margin: 0 auto;
+        float: left;
 
 
         .magazine-display {
-            padding: 0 10px;
+            padding: 0 210px 0 1%;
             margin: 0;
             .clearfix();
 
-            @media (min-width: 1025px) {
-                padding: 0 235px 0 20px;
+            @media (max-width: 980px) {
+                padding: 0 1% 0 1%;
             }
         }
 
@@ -30,6 +31,11 @@
                 display: block;
                 overflow: hidden;
                 box-shadow: 4px 3px 2px rgba(0,0,0,.3);
+            }
+
+            .countdown {
+              -webkit-box-shadow: 1px 1px 13px 0px rgb(0,0,0,.1);
+                      box-shadow: 1px 1px 13px 0px rgb(0,0,0,.1);
             }
 
             .cover {
@@ -60,24 +66,27 @@
             &.next {
                 position: relative;
 
-                .cover {
+                /*.cover {
                     opacity:.7;
                     border: 10px solid cyan;
-                }
+                }*/
 
                 .next-in {
                     position: absolute;
-                    top: 35%;
-                    left: 20px;
+                    top: 44%;
+                    width: 88%;
+                    margin: 0px auto;
+                    /*left: 20px;*/
                     text-align: center;
-                    text-transform: uppercase;
-                    font-size: 18px;
+                    /*text-transform: uppercase;*/
+                    /*font-size: 18px;*/
 
 
                     .days {
                         display: block;
-                        font-size: 28px;
-                        font-weight: 700;
+                        font-size: 2em;
+                        font-weight: 600;
+                        color: #FFF;
                     }
                 }
 

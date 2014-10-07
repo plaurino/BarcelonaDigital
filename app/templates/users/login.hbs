@@ -4,7 +4,7 @@
             <div class="col-sm-5 social-login">
                 <a class="btn btn-block btn-social btn-lg btn-facebook" {{action "authenticate"}}>
                     <i class="fa fa-facebook"></i>
-                    Igrese con Facebook
+                    Ingrese con Facebook
                 </a>
 
                 <a class="btn btn-block btn-social btn-lg btn-google-plus" {{action "authenticate"}}>
@@ -15,7 +15,7 @@
 
             <div class="col-sm-7 custom-login">
                 <span class="separator">ó</span>
-
+                <div class="email-login">
                 {{#if login-error}}
                   <span class="login-error">Error: usuario o contraseña incorrectos</span>
                 {{/if}}
@@ -40,6 +40,7 @@
                       <span class="forgot-password">{{#link-to 'users.recover'}}¿Olvidó su contraseña?{{/link-to}}</span>
                     </div>
                 </form>
+              </div>
             </div>
         </div>
     </div>

@@ -1,9 +1,27 @@
-<form role="form">
-  <div class="form-group">
-    <label for="InputEmail">Ingresa tu e-mail:</label>
-    {{input type="email" class="form-control" placeholder="Email"}}
-  </div>
-
-  <button type="submit" class="btn btn-default">Recuperar contraseña</button>
-</form>
-<span class="signup">{{#link-to 'users.login'}}Ingresar con una cuenta existente{{/link-to}}</span>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3 login-extend">
+			<h3 class="text-center tittle-login">Restablecé tu contraseña</h3>
+			<p class="small text-center txt-barcelona">
+				Pon tu correo electrónico que usaste para registrarte y te enviaremos un mensaje con un enlace para restablecer tu contraseña.
+			</p>
+			<form role="form">
+				<div class="form-group">
+					<label class="small" for="InputEmail">
+						Ingresa tu e-mail
+					</label>
+				
+					{{input type="email" class="form-control" placeholder="hola@ejemplo.com"}}
+		
+				</div>
+		
+		  	<button type="submit" class="btn btn-primary btn-block">
+		  		Recuperar contraseña
+		  	</button>
+			</form>
+			<span class="signup text-center block">
+				{{#link-to 'users.login'}}Volver a la pantalla de ingreso{{/link-to}}
+			</span>
+		</div>
+	</div>
+</div>

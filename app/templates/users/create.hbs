@@ -12,22 +12,22 @@ Enviando... Aguarde un momento por favor.
       <form role="form" {{action "create" on="submit"}}>
           <div class="form-group">
             <label class="small" for="InputEmail">Ingrese su correo</label>
-    
+
               {{input type="email" value=username id="username" placeholder="hola@ejemplo.com" name="InputEmail" class="form-control"}}
-          
+
           </div>
           <div class="form-group">
             <label class="small" for="InputPassword">Contraseña</label>
-            
+
             {{input type="password" value=password id="password" placeholder="Contraseña" name="InputPassword" class="form-control"}}
-          
+
           </div>
           <div class="form-group">
             {{!-- <label class="small" for="InputPassword">Repita su contraseña</label> --}}
-            
+
             {{!-- aca se tendria que modificar para el que verifica que las contraseñas sean iguales --}}
             {{input type="password" value=password id="password" placeholder="Repita su contraseña" name="InputPassword" class="form-control"}}
-          
+
           </div>
           <button type="submit" class="btn btn-primary btn-block">Registrarte</button>
         </form>

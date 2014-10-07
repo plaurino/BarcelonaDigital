@@ -10,20 +10,12 @@
     }
 }
 
-.form-group {
-  margin-bottom: 3px;
-}
-
-.input-lg {
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-}
-/*.login {
+.login {
     margin-top: 60px;
-}*/
+}
 
 .social-login {
-    margin-bottom: 10%;
+    margin: 7% auto;
 }
 
 .btn-enter {
@@ -33,54 +25,45 @@
 
 .btn-social {
     margin-bottom: (@grid-gutter-width / 2);
-    padding: 8px 0px;
 
-    &.btn-facebook{
-      border-color: darken(#2d4373, 10%);
-    }
-
+    &.btn-facebook,
     &.btn-google-plus {
-      border-color: darken(#c23321, 10%);
-    }
-    
-    &.btn-facebook:active,
-    &.btn-google-plus:active {
-      border-color: transparent;
+        border: 0;
     }
 }
 
 .login-assistance {
-    font-size: 12px;
+    float: left;
+    font-size: 13px;
 }
 
 
 .separator {
- /*   position: absolute;
+    position: absolute;
     .size(100%, 15px);
     margin-top: -38px;
     margin-left: (@grid-gutter-width / -2);
-    line-height: 15px;*/
-      display: block;
-      margin: 5px 0px;
-      text-align: center;
-      color: #999;
-      
-/*    &:before {
+    line-height: 15px;
+    text-align: center;
+    color: #999;
+
+    &:before,
+    &:after {
         position: absolute;
         top: 50%;
         display: block;
-        .size(100%, 2px);
+        .size(38%, 1px);
         background: #ddd;
         content: "";
-    }*/
+    }
 
-/*    &:before {
+    &:before {
         left: (@grid-gutter-width / 2);
     }
 
     &:after {
         right: (@grid-gutter-width / 2);
-    }*/
+    }
 }
 
 .email-login {
@@ -92,20 +75,27 @@
   color: @brand-danger;
   -webkit-animation: pull-down 200ms;
   animation: pull-down 200ms;
-  margin: 5% 0;
-  background: ligther(@brand-danger, 70%);
 }
 
-.forgot-password {
-  display: block;
+.login-extend {
   margin-top: 5%;
-  text-align: center;
+}
+
+.tittle-login {
+  color: @magenta;
+  margin-bottom: 3%;
+}
+
+.txt-barcelona {
+  margin-bottom: 7%;
 }
 
 .signup {
+  margin-top: 5%;
+}
+
+.block {
   display: block;
-  margin-top: 15%;
-  text-align: center;
 }
 
 @media (min-width: @screen-sm) {
@@ -116,15 +106,15 @@
         .translate(-50%,0);
     }
 
-/*    .social-login {
-        padding-right: 50px;
-    }*/
+    .social-login {
+        padding-right: 2%;
+    }
 
-/*    .custom-login {
-        padding-left: 50px;
-    }*/
+    .custom-login {
+        padding-left: 5%;
+    }
 
-/*    .separator {
+    .separator {
         left: 0;
         .size(15px, 100%);
         padding-top: 23%;
@@ -145,11 +135,10 @@
             top: auto;
             bottom: 0;
         }
+    }
 
-    }*/
-
-/*    .btn-enter {
+    .btn-enter {
         width: 40%;
         float: right;
-    }*/
+    }
 }

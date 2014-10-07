@@ -5,8 +5,13 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+//boton general
 .btn {
-    border: 0;
+    font-weight: 300;
+    border: 0px;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    border-bottom: 4px solid transparent;
 
     &:active,
     &:active:focus,
@@ -14,6 +19,30 @@ body {
     &:visited {
         outline: 0;
     }
+}
+
+.btn:active {
+    border-color: transparent;
+}
+
+//estilos de botones
+.btn-cyan {
+    border-color: @cyan-dark;
+    background: @cyan-shadow;
+    color: white;
+    margin-top: 5%;
+  }
+
+.btn-yellow {
+    border-color: @yellow-dark;
+    background: @yellow;
+    color: @yellow-dark;
+}
+
+.btn-magenta {
+    border-color: @magenta-dark;
+    background: @magenta;
+    color: white;
 }
 
 hr {

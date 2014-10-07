@@ -1,6 +1,9 @@
 //
 // Navbars
 // --------------------------------------------------
+//***BARCELONA CAMBIO LAS CLASES***///
+//.nav-header y nav-toggle, el breackpoint original @grid-float-breakpoint
+//***FIN***//
 
 
 // Wrapper and base class
@@ -31,7 +34,7 @@
 .navbar-header {
   &:extend(.clearfix all);
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media (min-width: @screen-md) {
     float: left;
   }
 }
@@ -215,7 +218,7 @@
     margin-top: 4px;
   }
 
-  @media (min-width: @grid-float-breakpoint) {
+  @media (min-width: @screen-md) {
     display: none;
   }
 }

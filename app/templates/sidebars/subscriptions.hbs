@@ -2,7 +2,7 @@
   <menu>
     {{#if active}}
       <menuitem>Suscripción activa</menuitem>
-    {{else}}
+    	{{else}}
       {{#if mp_payment_link}}
         <menuitem class="btn btn-lg btn-suscribe" {{bind-attr href=mp_payment_link}} target="_blank" {{action 'subscribe_mp'}}>Suscribirse</menuitem>
       {{/if}}
@@ -12,19 +12,25 @@
 
 <div class="sidebar-wrapper">
 	<ul class="nav nav-pills nav-stacked menu">
+		{{!-- {{#if active}} --}}
+		<li><a href="#">Revisar suscripcíon</a></li>
+		{{!-- {{else}}
+    {{#if mp_payment_link}} --}}
 		<li class="suscribir">
-			<div class="btn btn-lg btn-suscribe">Suscríbase y sea feliz</div>
+			<div class="btn btn-lg btn-suscribe" {{bind-attr href=mp_payment_link}} target="_blank" {{action 'subscribe_mp'}}>Suscríbase y sea feliz</div>
+		{{!-- {{/if}}
+    {{/if}} --}}
 		</li>
 		<li><a href="#">Revisar perfil</a></li>
-		<li><a href="#">Revisar suscripcíon</a></li>
 		<li class="divider"></li>
 		<li><a href="#">Contáctenos</a></li>
 		<li><a href="">Preguntas frecuentes</a></li>
 		<li class="divider"></li>
-		<li class="salir">
-			<button class="sign-out fa fa-sign-out" {{action 'logout'}} title="Salir">
+		<li class="logout">
+			<a href="" class="sign-out" {{action 'logout'}}>Cerrar sesión</a>
+			{{!-- <button class="sign-out fa fa-sign-out" {{action 'logout'}} title="Salir">
 				Cerrar sesión
-			</button>
+			</button> --}}
 		</li>
 	</ul>
 </div>

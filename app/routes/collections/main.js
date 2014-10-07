@@ -8,8 +8,7 @@ export default Ember.Route.extend({
     return this.store.find('collection');
   },
   setupController: function(controller, model) {
-    controller.set('model', model);
-    controller.set('subscription', this.store.find('subscription', 1));
+    controller.set('subscription', this.store.find('subscription'));
   },
   actions: {
     error: function() {

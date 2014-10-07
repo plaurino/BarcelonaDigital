@@ -21,8 +21,13 @@ Router.map(function() {
       path: 'view/:id'
     });
   });
-  this.route('issues');
-  this.route('issues/view');
+
+  this.resource('subscriptions', function() {
+    this.route('options');
+    this.route('subscribe', {
+      path: 'subscribe/:id'
+    });
+  });
 });
 
 export default Router;

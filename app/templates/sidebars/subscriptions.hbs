@@ -3,9 +3,7 @@
     {{#if active}}
       <menuitem>Suscripción activa</menuitem>
     {{else}}
-      {{#if mp_payment_link}}
-        <menuitem class="btn btn-lg btn-suscribe" {{bind-attr href=mp_payment_link}} target="_blank" {{action 'subscribe_mp'}}>Suscribirse</menuitem>
-      {{/if}}
+      {{#link-to 'subscriptions.options'}}Suscribirse{{/link-to}}
     {{/if}}
   </menu>
 </div>

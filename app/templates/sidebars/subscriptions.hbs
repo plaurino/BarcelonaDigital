@@ -1,4 +1,4 @@
-<div class="sidebar-wrapper">
+{{!-- <div class="sidebar-wrapper">
   <menu>
     {{#if active}}
       <menuitem>Suscripción activa</menuitem>
@@ -6,4 +6,23 @@
       {{#link-to 'subscriptions.options'}}Suscribirse{{/link-to}}
     {{/if}}
   </menu>
+</div> --}}
+
+<div class="sidebar-wrapper">
+	<ul class="nav nav-pills nav-stacked menu">
+		<li class="suscribir">
+			<div class="btn btn-lg btn-suscribe">Suscríbase y sea feliz</div>
+		</li>
+		<li><a href="#">Revisar perfil</a></li>
+		<li><a href="#">Revisar suscripcíon</a></li>
+		<li class="divider"></li>
+		<li><a href="#">Contáctenos</a></li>
+		<li><a href="">Preguntas frecuentes</a></li>
+		<li class="divider"></li>
+		<li class="salir">
+			<button class="sign-out fa fa-sign-out" {{action 'logout'}} title="Salir">
+				Cerrar sesión
+			</button>
+		</li>
+	</ul>
 </div>

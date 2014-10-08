@@ -6,17 +6,17 @@
       <h1>{{ name }}</h2>
       <ul class="magazine-display">
           <li class="magazine next">
-              <div class="next-in">
-                  Próximo:
-                  <span class="days">10 días</span>
-              </div>
+            <img src="https://dl.dropboxusercontent.com/u/12659883/countdown.svg" alt="Próximo" class="cover countdown" />
+            <div class="next-in">
+              <span class="days">10 días</span>
+            </div>
           </li>
           {{#each issues }}
             <li class="magazine">
                 {{#link-to 'issue.view' this}}
                   <img class="cover" {{bind-attr src=cover}} {{bind-attr alt=numberTitle}} />
                   <div class="magazine-info">
-                      <h2 class="h3">Revista 22 Sept.</h2>
+                      <h4>Barcelona #296 Anuario 2013</h4>
                   </div>
                 {{/link-to}}
             </li>

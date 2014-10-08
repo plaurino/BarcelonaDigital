@@ -32,3 +32,16 @@
         }
     }
 }
+
+.navbar-header {
+  &:extend(.clearfix all);
+  @media (min-width: @screen-md) {
+    float: left;
+  }
+}
+
+.navbar-toggle {
+  @media (min-width: @screen-md) {
+    display: none;
+  }
+}

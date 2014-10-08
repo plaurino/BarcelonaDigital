@@ -14,6 +14,9 @@
     "ember-qunit-notifications": "0.0.4",
     "qunit": "~1.15.0",
     "socket.io-client": "~1.1.0",
-    "ladda": "~0.9.4"
+    "ladda": "~0.9.4",
+    "bootstrap": "~3.2.0",
+    "font-awesome": "~4.2.0",
+    "bootstrap-social": "~4.8.0"
   }
 }

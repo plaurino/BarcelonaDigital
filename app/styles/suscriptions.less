@@ -1,0 +1,91 @@
+.row {
+	margin: 0;
+}
+
+.tittle {
+	color: @magenta;
+	font-size: 1.7em;
+	margin: 3% 0px;
+}
+
+
+.sub-tittle {
+	font-size: 1.25em;
+	font-weight: 600;
+	margin-top: 5%;
+
+	&:before {
+	content: "icon";
+	color: @gray-light;
+	}
+}
+
+.item {
+	margin: 3%;
+	text-align: center;
+	.select {
+		display: inline-block;
+		margin: 2% 10% 2% 0%;
+		width: 150px;
+		padding: 2%;
+		background: cyan;
+	}
+}
+
+.paiment-plan {
+
+	.container-plan {
+		margin: 0 2%;
+	}
+
+	.plan {
+		text-align: center;
+		width: 200px;
+		background: lighten(@magenta, 50%);
+		margin: 0;
+		padding: 0;
+
+		.head {
+			background-color: yellow;
+			height: 80px;
+		}
+	}
+
+	.signo {
+		position: absolute;
+		left: 58px;
+		top: 15px;
+		font-size: 18px;
+	}
+
+	.precio {
+		font-weight: 600;
+		font-size: 40px;
+		line-height: 40px;
+	}
+  
+  .moneda {
+		font-size: 14px;
+		left: 78px;
+		position: absolute;
+		text-transform: uppercase;
+		top: 53px;
+	}
+
+	.periodo {
+		padding-top: 10%;
+		text-transform: uppercase;
+	}
+	.ventajas {
+		p:nth-child(odd) {
+			background-color: grey;
+		}
+	}
+
+}
+
+@media (min-width: 768px) {
+	.container-plan {
+		margin: 0 -3%;
+	}
+}

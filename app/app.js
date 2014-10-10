@@ -7,14 +7,14 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
-  podModulePrefix: config.podModulePrefix,  
+  podModulePrefix: config.podModulePrefix,
   Resolver: Resolver
 });
 
-loadInitializers(App, 'luke');
+loadInitializers(App, config.modulePrefix);
 
 if (localStorage.getItem('user-token')) {
-  Ember.$.ajaxPrefilter(function(options, originalOptions, xhr) {
+  Ember.$.ajaxPrefilter((options, originalOptions, xhr) => {
       return xhr.setRequestHeader('Authorization', 'Basic ' + localStorage.getItem('user-token'));
   });
 }

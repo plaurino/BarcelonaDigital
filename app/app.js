@@ -14,7 +14,7 @@ var App = Ember.Application.extend({
 loadInitializers(App, config.modulePrefix);
 
 if (localStorage.getItem('user-token')) {
-  Ember.$.ajaxPrefilter((options, originalOptions, xhr) => {
+  Ember.$.ajaxPrefilter(function(options, originalOptions, xhr) {
       return xhr.setRequestHeader('Authorization', 'Basic ' + localStorage.getItem('user-token'));
   });
 }

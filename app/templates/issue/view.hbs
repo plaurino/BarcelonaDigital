@@ -1,12 +1,6 @@
 <div class="issue">
-  {{#each page in pages}}
-    <div class="page">
-      <img class="issue-page" {{bind-attr src=page.url}} />
-    </div>
-  {{/each}}
-</div>
 
-{{kd-issue issue=@this}}
+{{kd-issue issues=this}}
 
 <menu class="controls">
   <menuitem class="zoom-in"><button class="btn btn-lg btn-primary"><span class="fa fa-search-plus"></span></button></menuitem>

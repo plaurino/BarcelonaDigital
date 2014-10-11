@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForComponent('kd-issue', 'KdIssueComponent', {
+moduleForComponent('kd-issue-page', 'KdIssuePageComponent', {
   // specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar']
 });

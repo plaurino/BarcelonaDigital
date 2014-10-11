@@ -1,7 +1,7 @@
 <div class="issue">
-  {{#each page in pages}}
+  {{#each page in issues.pages}}
     <div class="page">
-      <img class="issue-page" {{bind-attr src=page.url}} />
+      {{kd-issue-page src=page.url number=id}}
     </div>
   {{/each}}
 </div>

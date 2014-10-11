@@ -10,9 +10,9 @@
  		<div class="row">
  			<div class="col-md-10 col-md-offset-1 col-xs-12">
  				<h2 class="tittle text-center">Suscribiendote tendrás acceso instantaneo a los numeros de la Revista Barcelona</h2>
- 				<p>Como pensamos en todo, tambien te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
+ 				<p class="hello">Como pensamos en todo, tambien te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
  				<div class="paiment-plan row">
- 					<h3 class="sub-tittle">Elige el plan que te guste</h3>
+ 					<h3 class="sub-tittle"><span class="icon-01"></span>Elige el plan que te guste</h3>
  					<div class="small container-plan">
  						<div class="plan card col-sm-4 col-xs-12">
  							<div class="head">
@@ -21,10 +21,11 @@
 	 							<p class="moneda">Pesos</p>				
 		 					</div>
 	 						<div class="ventajas">
-	 							<h4 class="periodo">3 Meses</h4>		 							
-	 						 	<p class="items">Acceso a todos los numeros*</p>
+	 							<h4 class="periodo ch-3">3 Meses</h4>		 							
+	 						 	<p class="items">Acceso a todos los numeros</p>
 	 						 	<p class="items">Crédito, Débito o Deposito</p>
-	 						 	<buton class="credit-card btn btn-yellow">Elegir Plan</buton>
+	 						 	<input type="radio" name="suscription-opcion" id="3-months" class="select-plan">
+		 						 	<label for="3-months" class="select-plan">Suscribirme al plan</label>
 	 						</div>
 		 				</div>				
 		 					<div class="plan card col-sm-4 col-xs-12">
@@ -37,8 +38,9 @@
 		 							<h4 class="periodo">Mensual</h4>
 		 							<p class="items">Renovable todos los meses</p>
 		 						 	<p class="items">Solo Tarjeta de Crédito</p>
-		 						 	<p class="items">Acceso a todos los numero*</p>
-		 						 	<buton class="credit-card btn btn-yellow">Elegir Plan</buton>
+		 						 	<p class="items">Acceso a todos los numeros</p>
+		 						 	<input type="radio" name="suscription-opcion" id="monthly" class="select-plan">
+		 						 	<label for="monthly" class="select-plan">Suscribirme al plan</label>
 		 						</div>
 		 					</div>
 		 					<div class="plan card col-sm-4 col-xs-12">
@@ -49,22 +51,28 @@
 		 						</div>
 		 						<div class="ventajas">
 		 							<h4 class="periodo">6 Meses</h4>		 						 	
-		 						 	<p class="items">Acceso a todos los número*</p>
+		 						 	<p class="items">Acceso a todos los número</p>
 		 						 	<p class="items">Crédito, Débito o Deposito</p>
-		 						 	<button class="credit-card btn btn-yellow">Elegir Plan</button>
+		 						 	<input type="radio" name="suscription-opcion" id="6-months" class="select-plan">
+		 						 	<label for="6-months" class="select-plan">Suscribirme al plan</label>
 		 						</div>
 		 					</div>
  					</div>
  				</div>
  				<div class="paiment-method"> 					
- 					<h3 class="sub-tittle">Elige tu método de pago</h3>
+ 					<h3 class="sub-tittle"><span class="icon-02"></span>Elige tu método de pago</h3>
  					<div class="choise-plan-process">
- 						<p class="info text-info bg-info text-center">Esperando a la eleccion de un plan de suscripcion ... (aca entra el procesando, esperando el input del suscriptor)</p>
+					    <div class="info text-info bg-info text-center circle">
+					    	Seleccione un plan de suscripción
+	 						  <div class="circle1"></div>
+					      <div class="circle2"></div>
+					      <div class="circle3"></div>
+					    </div>
  					</div>
  					<div class="col-md-12 col-xs-12 method">
  						<ol class="item">
- 							<li class="select">Paypal</li>
- 							<li class="select">MercadoPago</li>
+ 							<li class="select"><button class="btn btn-primary-bg btn-compra">Paypal</button></li>
+ 							<li class="select"><button class="btn btn-primary-bg btn-compra">Mercado Pago</button></li>
  						</ol>
  					</div>
  				</div> 				

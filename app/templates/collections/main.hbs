@@ -2,25 +2,5 @@
 
     {{kd-sidebar display=showSidebar logout="logout"}}
 
-    {{#each}}
-      <h1>{{ name }}</h2>
-      <ul class="magazine-display">
-          <li class="magazine next">
-            <img src="https://dl.dropboxusercontent.com/u/12659883/countdown.svg" alt="Próximo" class="cover countdown" />
-            <div class="next-in">
-              <span class="days">10 días</span>
-            </div>
-          </li>
-          {{#each issues }}
-            <li class="magazine">
-                {{#link-to 'issue.view' this}}
-                  <img class="cover" {{bind-attr src=cover}} {{bind-attr alt=numberTitle}} />
-                  <div class="magazine-info">
-                      <h4>Barcelona #296 Anuario 2013</h4>
-                  </div>
-                {{/link-to}}
-            </li>
-          {{/each}}
-      </ul>
-    {{/each}}
+    {{kd-collection issues=this}}
 </section>

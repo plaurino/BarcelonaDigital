@@ -17,5 +17,55 @@
 }
 
 .issue-page {
+  position: relative;
   width: 100%;
+  .issue-page-image {
+    width: 100%;
+  }
+}
+
+.page-loading {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  .page-loading-bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: magenta;
+    width: 80%;
+    height: 100%;
+    -webkit-animation-name: loading-bar;
+    animation-name: loading-bar;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@-webkit-keyframes loading-bar {
+  from {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes loading-bar {
+  from {
+    transform: translateX(-200%);
+  }
+
+  to {
+    transform: translateX(200%);
+  }
 }

@@ -22,9 +22,9 @@ module.exports = function(environment) {
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
     'script-src': "'self'",
-    'font-src': "'self'",
+    'font-src': "'self' http://fonts.gstatic.com/",
     'connect-src': "'self'",
-    'img-src': "'self'",
+    'img-src': "'self' http://revisbarcelona.com:8081",
     'style-src': "'self' http://fonts.gstatic.com",
     'media-src': "'self'"
   }

@@ -1,4 +1,6 @@
+<img {{bind-attr src=src}} {{action "next"}} class="issue-page-image"/>
 {{#unless loaded}}
-  <div class="loading">Cargando...</div>
+  <div class="page-loading">
+    <span class="page-loading-bar"></span>
+  </div>
 {{/unless}}
-

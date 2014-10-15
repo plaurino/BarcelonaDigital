@@ -18,16 +18,16 @@
  							<div class="head">
 	 							<p class="signo">$</p>
 	 							<p class="precio">75</p>
-	 							<p class="moneda">Pesos</p>				
+	 							<p class="moneda">Pesos</p>
 		 					</div>
 	 						<div class="ventajas">
-	 							<h4 class="periodo ch-3">3 Meses</h4>		 							
+	 							<h4 class="periodo ch-3">3 Meses</h4>
 	 						 	<p class="items">Acceso a todos los numeros</p>
 	 						 	<p class="items">Crédito, Débito o Deposito</p>
-	 						 	<input type="radio" name="suscription-opcion" id="3-months" class="select-plan">
-		 						 	<label for="3-months" class="select-plan">Suscribirme al plan</label>
+	 						 	{{radio-button value="3" checked=selectedSubscription name="suscription-opcion" id="3-months" class="select-plan"}}
+		 						 <label for="3-months" class="select-plan">Suscribirme al plan</label>
 	 						</div>
-		 				</div>				
+		 				</div>
 		 					<div class="plan card col-sm-4 col-xs-12">
 		 						<div class="head">
 		 							<p class="signo">$</p>
@@ -39,7 +39,7 @@
 		 							<p class="items">Renovable todos los meses</p>
 		 						 	<p class="items">Solo Tarjeta de Crédito</p>
 		 						 	<p class="items">Acceso a todos los numeros</p>
-		 						 	<input type="radio" name="suscription-opcion" id="monthly" class="select-plan">
+		 						 	{{radio-button checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan"}}
 		 						 	<label for="monthly" class="select-plan">Suscribirme al plan</label>
 		 						</div>
 		 					</div>
@@ -50,40 +50,44 @@
 		 							<p class="moneda">Pesos</p>
 		 						</div>
 		 						<div class="ventajas">
-		 							<h4 class="periodo">6 Meses</h4>		 						 	
+		 							<h4 class="periodo">6 Meses</h4>
 		 						 	<p class="items">Acceso a todos los número</p>
 		 						 	<p class="items">Crédito, Débito o Deposito</p>
-		 						 	<input type="radio" name="suscription-opcion" id="6-months" class="select-plan">
+                  {{radio-button value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" }}
 		 						 	<label for="6-months" class="select-plan">Suscribirme al plan</label>
 		 						</div>
 		 					</div>
  					</div>
  				</div>
- 				<div class="paiment-method"> 					
+          {{#if selectedSubscription}}
+            {{#unless payments}}
+ 				<div class="paiment-method">
  					<h3 class="sub-tittle"><span class="icon-02"></span>Elige tu método de pago</h3>
- 					<div class="choise-plan-process">
-					    <div class="info text-info bg-info text-center circle">
-					    	Seleccione un plan de suscripción
-	 						  <div class="circle1"></div>
-					      <div class="circle2"></div>
-					      <div class="circle3"></div>
-					    </div>
- 					</div>
- 					<div class="col-md-12 col-xs-12 method">
- 						<ol class="item">
- 							<li class="select"><button class="btn btn-primary-bg btn-compra">Paypal</button></li>
- 							<li class="select"><button class="btn btn-primary-bg btn-compra">Mercado Pago</button></li>
- 						</ol>
- 					</div>
- 				</div> 				
- 				{{!-- <div class="finish">
- 					<h3 class="sub-tittle">Rivasá tu compra</h3>
- 					<div class="mensaje">
- 						<h4>Dispones de un mes gratis</h4>
- 						<p>Suscribiendote se te computará EL PAGO ELEGIDO despues del més gratis</p>
- 						<button class="continuar btn btn-primary">Ir a pagar tu plan</button>
- 					</div>
- 				</div> --}}
+ 					    <div class="choise-plan-process">
+					        <div class="info text-info bg-info text-center circle">
+					    	      Seleccione un plan de suscripción
+	 						        <div class="circle1"></div>
+					            <div class="circle2"></div>
+					           <div class="circle3"></div>
+					         </div>
+ 					      </div>
+ 				</div>
+             {{/unless}}
+          {{/if}}
+
+          {{#if payments}}
+ 				<div class="paiment-method">
+ 					<h3 class="sub-tittle"><span class="icon-02"></span>Elige tu método de pago</h3>
+ 					    <div class="col-md-12 col-xs-12 method">
+ 						    <ol class="item">
+ 							    <li class="select"><button class="btn btn-primary-bg btn-compra">Paypal</button></li>
+                   {{#with payments}}
+ 							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra">Mercado Pago</button></a></li>
+                   {{/with}}
+ 						    </ol>
+ 					   </div>
+ 				</div>
+        {{/if}}
  			</div>
  		</div>
  	</div>

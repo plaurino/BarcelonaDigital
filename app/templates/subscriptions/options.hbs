@@ -24,8 +24,12 @@
 	 							<h4 class="periodo ch-3">3 Meses</h4>
 	 						 	<p class="items">Acceso a todos los numeros</p>
 	 						 	<p class="items">Crédito, Débito o Deposito</p>
-	 						 	{{radio-button value="3" checked=selectedSubscription name="suscription-opcion" id="3-months" class="select-plan"}}
-		 						 <label for="3-months" class="select-plan">Suscribirme al plan</label>
+	 						 	<div class="choise">
+	 						 		<label for="3-months" class="select-plan">
+		 						 		{{radio-button value="3" checked=selectedSubscription name="suscription-opcion" id="3-months"class="select-plan"}}
+		 						 		<span>Quiero éste plan</span>
+	 						 		</label>
+		 						</div>				 	
 	 						</div>
 		 				</div>
 		 					<div class="plan card col-sm-4 col-xs-12">
@@ -39,8 +43,12 @@
 		 							<p class="items">Renovable todos los meses</p>
 		 						 	<p class="items">Solo Tarjeta de Crédito</p>
 		 						 	<p class="items">Acceso a todos los numeros</p>
-		 						 	{{radio-button checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan"}}
-		 						 	<label for="monthly" class="select-plan">Suscribirme al plan</label>
+		 						 	<div class="choise">
+		 						 		<label for="monthly" class="select-plan">
+			 						 		{{radio-button checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan"}}
+			 						 		<span>Quiero éste plan</span>
+		 						 		</label>
+		 						 	</div>	
 		 						</div>
 		 					</div>
 		 					<div class="plan card col-sm-4 col-xs-12">
@@ -53,8 +61,12 @@
 		 							<h4 class="periodo">6 Meses</h4>
 		 						 	<p class="items">Acceso a todos los número</p>
 		 						 	<p class="items">Crédito, Débito o Deposito</p>
-                  {{radio-button value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" }}
-		 						 	<label for="6-months" class="select-plan">Suscribirme al plan</label>
+		 						 	<div class="choise">
+		 						 		<label for="6-months" class="select-plan">
+			 						 		{{radio-button value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" }}
+			 						 		<span>Quiero éste plan</span>
+	 						 			</label>
+		 							</div>
 		 						</div>
 		 					</div>
  					</div>

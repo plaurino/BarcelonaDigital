@@ -118,29 +118,44 @@
 			}
 		}
 
-		input[type=radio] + label {
-			color: @gray-light;
-			font-style: italic;
+		.choise{
+			padding: 2%;
+			margin: 0 5% 2%;
+		}
+
+		input[type=radio] + span {
+			color: @gray;
 			font-weight: 300;
 			font-size: 12px;
+			text-align: center;
+			border: 2px solid @border-compra;
+			margin: 0;
+			padding: 6% 15%;
+			border-radius: 6px;
+			overflow: auto;
+			display: block;
+
 		}
 
-		input[type=radio]:checked + label {
-			color: @color-precio;
+		input[type=radio]:checked + span {
+			color: white;
 			font-style: normal;
-			font-weight: 600;
+			font-size: 11px;
 			text-transform: uppercase;
+			background: @color-compra;
+			border: 2px solid @color-compra
 
 		}
-
-//action checked
-// #3-months:checked ~ h4.ch-3 {
-// 	color: @color-precio;
-// }
 
 		.select-plan {		
-			padding: 15% 0px 6%;
+			padding: 10% 0px 6%;
+			display: block;
+			margin: 2% 0;
 
+			> input {
+				display: none;
+			}
+			
 			&:focus {
 				background: @color-precio;
 			}
@@ -222,10 +237,13 @@
 		box-shadow: 1px 1px 15px @color-compra; 
 	}
 
-	&:active,
-	&:focus {
+	&:active {
 		color: white;
 		box-shadow: inset 0px 0px 10px rgba(0,0,0,.3);
 		background: darken(@color-compra, 5%);
+	}
+
+	&:focus {
+		color: white;
 	}
 }

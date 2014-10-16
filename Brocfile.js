@@ -22,5 +22,6 @@ app.import('bower_components/ladda/dist/ladda.min.js');
 app.import('bower_components/ladda/dist/ladda-themeless.min.css');
 app.import('bower_components/socket.io-client/socket.io.js');
 app.import('bower_components/hammerjs/hammer.js');
+app.import('bower_components/fastclick/lib/fastclick.js');
 
 module.exports = app.toTree();

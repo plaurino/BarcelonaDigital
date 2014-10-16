@@ -12,14 +12,14 @@ export default Ember.Controller.extend({
   actions: {
     setSubscription0: function() {
       Ember.run(function() {
-        this.set('selectedSubscription', 0);
+        this.set('selectedSubscription', '0');
       }.bind(this));
     },
     setSubscription3: function() {
-      this.set('selectedSubscription', 3);
+      this.set('selectedSubscription', '3');
     },
     setSubscription6: function() {
-      this.set('selectedSubscription', 6);
+      this.set('selectedSubscription', '6');
     }
   },
 });

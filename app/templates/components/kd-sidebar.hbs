@@ -1,18 +1,18 @@
 <div {{bind-attr class="display:show-sidebar:hide-sidebar :sidebar-wrapper"}}>
   <ul class="nav nav-pills nav-stacked menu">
-    <li><a href="#">Revisar suscripcíon</a></li>
-    <li class="divider"></li>
     <li class="suscribir">
       {{#link-to 'subscriptions.options' class="sidebar-link"  }}<button class="btn btn-lg btn-suscribe">Suscríbase y sea feliz</button>{{/link-to}}
     </li>
-    <li><a class="sidebar-link" href="#">Revisar perfil</a></li>
+    <li><a class="sidebar-link" href="#"><span class="icon icon-coin"></span>Revisar suscripcíon</a></li>
     <li class="divider"></li>
-    <li><a class="sidebar-link"href="#">Contáctenos</a></li>
+    <li><a class="sidebar-link" href="#"><span class="icon icon-user"></span>Revisar perfil</a></li>
     <li class="divider"></li>
-    <li><a class="sidebar-link"href="">Preguntas frecuentes</a></li>
+    <li><a class="sidebar-link"href="#"><span class="icon icon-mail"></span>Contáctenos</a></li>
+    <li class="divider"></li>
+    <li><a class="sidebar-link"href=""><span class="icon icon-check-alt"></span>Preguntas frecuentes</a></li>
     <li class="divider"></li>
     <li class="logout">
-      <button class="sign-out sidebar-link" {{action 'logout'}}>Cerrar sesión</button>
+      <button class="sign-out sidebar-link" {{action 'logout'}} ><span class="icon icon-login"></span>Cerrar sesión</button>
     </li>
     <li class="divider"></li>
   </ul>

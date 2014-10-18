@@ -28,6 +28,14 @@
       padding-left: 1%;
       color: #FFF;
 
+      .logout {
+        &:hover,
+        &:active,
+        &:focus {
+          background: @back-magenta-hover;
+        }
+      }
+
       .divider {
         border-top: 1px solid rgba(0,0,0,.2);
       }
@@ -41,20 +49,27 @@
         &:active {
           color: #fff;
           font-weight: 300;
-          font-size: 1.1em;
         }
+      }
+
+      .icon {
+        margin-right: 3%;
+        font-size: 1.2em;
+
       }
 
       .sign-out {
         width: 100%;
         background: none;
         border: none;
+        text-align: left;
+        padding: 10px 15px 8px;
       }
     }
 
     .btn-suscribe {
         padding: 6% 8%;
-        margin: 15% 7% 12%;
+        margin: 15% 0 12%;
         color: rgb(255,0,78);
         background: rgb(229,216,7);
         font-size: 14px;

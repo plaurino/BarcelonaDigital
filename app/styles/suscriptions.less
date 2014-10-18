@@ -24,6 +24,14 @@
 	margin-top: 5%;
 }
 
+.number {
+	position: relative;
+	top: 5px;
+	font-size: 1.6em;
+	color: lighten(@color-compra, 15%);
+	margin-right: 1%;
+}
+
 // ELECCION DEL PLAN DE PAGO
 
 .paiment-plan {
@@ -45,6 +53,7 @@
 		}
 	}
 
+	
 	.plan {
 		text-align: center;
 		width: 200px;
@@ -53,6 +62,8 @@
 		border-radius: 4px;
 		border: 1px solid @gray-lighter;
 		box-shadow: 0px 0px 5px rgba(0,0,0,.2);
+		position: relative;
+		top: 15px;
 
 		&:hover,
 		&:active,
@@ -60,6 +71,11 @@
 			box-shadow: 0px 0px 7px @color-precio;
 			border-color: @color-precio;
 		}
+
+	.card {
+		top: 0px !important;
+		box-shadow: 0px 0px 8px rgba(0,0,0,.5);
+	}
 
 		.head {
 			background-color: @color-precio;

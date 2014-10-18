@@ -12,9 +12,9 @@
  				<h2 class="tittle text-center">Suscribiendote tendrás acceso instantaneo a los numeros de la Revista Barcelona</h2>
  				<p class="hello">Como pensamos en todo, tambien te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
  				<div class="paiment-plan row">
- 					<h3 class="sub-tittle"><span class="icon-01"></span>Elige el plan que te guste</h3>
+ 					<h3 class="sub-tittle"><span class="icon-01 number"></span>Elige el plan que te guste</h3>
  					<div class="small container-plan">
- 						<div class="plan card col-sm-4 col-xs-12" {{action "setSubscription3"}}>
+ 						<div class="plan col-sm-4 col-xs-12" {{action "setSubscription3"}}>
  							<div class="head">
 	 							<p class="signo">$</p>
 	 							<p class="precio">75</p>
@@ -32,7 +32,7 @@
 		 						</div>
 	 						</div>
 		 				</div>
-		 					<div class="plan card col-sm-4 col-xs-12" {{action "setSubscription0"}}>
+		 					<div class="plan card col-sm-4 col-xs-12 " {{action "setSubscription0"}}>
 		 						<div class="head">
 		 							<p class="signo">$</p>
 		 							<p class="precio">25</p>
@@ -51,7 +51,7 @@
 		 						 	</div>
 		 						</div>
 		 					</div>
-		 					<div class="plan card col-sm-4 col-xs-12" {{action "setSubscription6"}}>
+		 					<div class="plan col-sm-4 col-xs-12" {{action "setSubscription6"}}>
 		 						<div class="head">
 		 							<p class="signo">$</p>
 		 							<p class="precio">150</p>
@@ -74,10 +74,10 @@
           {{#if selectedSubscription}}
             {{#unless payments}}
  				<div class="paiment-method">
- 					<h3 class="sub-tittle"><span class="icon-02"></span>Elige tu método de pago</h3>
+ 					<h3 class="sub-tittle"><span class="icon-02 number"></span>Elige tu método de pago</h3>
  					    <div class="choise-plan-process">
 					        <div class="info text-info bg-info text-center circle">
-					    	      Seleccione un plan de suscripción
+					    	      Generando método de pago.
 	 						        <div class="circle1"></div>
 					            <div class="circle2"></div>
 					           <div class="circle3"></div>
@@ -89,7 +89,7 @@
 
           {{#if payments}}
  				<div class="paiment-method">
- 					<h3 class="sub-tittle"><span class="icon-02"></span>Elige tu método de pago</h3>
+ 					<h3 class="sub-tittle"><span class="icon-02 number"></span>Elige tu método de pago</h3>
  					    <div class="col-md-12 col-xs-12 method">
  						    <ol class="item">
  							    <li class="select"><button class="btn btn-primary-bg btn-compra">Paypal</button></li>

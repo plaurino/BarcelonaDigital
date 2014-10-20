@@ -9,7 +9,7 @@
 .tittle {
 	color: @magenta;
 	font-size: 1.9em;
-	margin: 8% 0px 6%;
+	margin: 4% 0px 6%;
 }
 
 .hello {
@@ -21,7 +21,7 @@
 .sub-tittle {
 	font-size: 1.25em;
 	font-weight: 300;
-	margin-top: 5%;
+	margin-top: 2%;
 }
 
 .number {
@@ -58,6 +58,7 @@
 		text-align: center;
 		width: 200px;
 		margin: 4px;
+		margin-bottom: 10%;
 		padding: 0;
 		border-radius: 4px;
 		border: 1px solid @gray-lighter;
@@ -240,26 +241,60 @@
 	}
 }
 
+//BOTONES
+
 .btn-compra {
 	margin: 15px 20px;
-	width: 213px;
-	background: lighten(@color-compra, 12%);
-	color: white;
-	box-shadow: 1px 1px 5px rgba(0,0,0,.8);
+	width: 154px;
+	height: 57px;
+	text-indent: -9999px;
+	color: transparent;
+	padding: 12px 6%;
+	background-color: transparent;
+	border-radius: 10px;
+	border: 2px solid @border-compra;
 
 	&:hover {
-		color: white;
-		background-color: lighten(@color-compra, 20%);
-		box-shadow: 1px 1px 15px @color-compra; 
+		color: transparent;
+		box-shadow: 1px 1px 15px @color-compra;
+		border: 2px solid @color-compra;
 	}
 
 	&:active {
-		color: white;
+		color: transparent;
 		box-shadow: inset 0px 0px 10px rgba(0,0,0,.3);
-		background: darken(@color-compra, 5%);
+		border: 2px solid @color-compra;
 	}
 
 	&:focus {
-		color: white;
+		color: transparent;
 	}
 }
+
+.btn-option {
+		background: url(@back-btn-compra) no-repeat;
+		background-size: 200%;
+		width: 130px;
+		height: 33px;
+		display: block;
+	}
+
+	.btn-paypal {
+		background-position: -134px 0px;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-position: 5px 0px;
+		}
+	}
+
+		.btn-mercado {
+		background-position: -140px -44px;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-position: -1px -44px;
+		}
+	}

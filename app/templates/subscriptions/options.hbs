@@ -12,7 +12,7 @@
  				<h2 class="tittle text-center">Suscribiendote tendrás acceso instantaneo a los numeros de la Revista Barcelona</h2>
  				<p class="hello">Como pensamos en todo, tambien te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
  				<div class="paiment-plan row">
- 					<h3 class="sub-tittle"><span class="icon-01 number"></span>Elige el plan que te guste</h3>
+ 					<h3 class="sub-tittle"><span class="icon-number1 number"></span>Elige el plan que te guste</h3>
  					<div class="small container-plan">
  						<div class="plan col-sm-4 col-xs-12" {{action "setSubscription3"}}>
  							<div class="head">
@@ -74,7 +74,7 @@
           {{#if selectedSubscription}}
             {{#unless payments}}
  				<div class="paiment-method">
- 					<h3 class="sub-tittle"><span class="icon-02 number"></span>Elige tu método de pago</h3>
+ 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
  					    <div class="choise-plan-process">
 					        <div class="info text-info bg-info text-center circle">
 					    	      Generando método de pago.
@@ -89,12 +89,12 @@
 
           {{#if payments}}
  				<div class="paiment-method">
- 					<h3 class="sub-tittle"><span class="icon-02 number"></span>Elige tu método de pago</h3>
+ 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
  					    <div class="col-md-12 col-xs-12 method">
  						    <ol class="item">
- 							    <li class="select"><button class="btn btn-primary-bg btn-compra">Paypal</button></li>
+ 							    <li class="select"><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-paypal"></span>Paypal</button></li>
                    {{#with payments}}
- 							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra">Mercado Pago</button></a></li>
+ 							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-mercado"></span>Mercado Pago</button></a></li>
                    {{/with}}
  						    </ol>
  					   </div>

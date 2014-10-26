@@ -68,13 +68,10 @@ module.exports = function(environment) {
   ENV['torii'] = {
     providers: {
       'facebook-oauth2': {
-        apiKey: '286966254835786',
-        redirectUri: '//revisbarcelona.com:8083',
+        apiKey: '286966254835786'
       }
     }
   };
-
-  ENV['KIOSKO'] = 'http://localhost:3000/'
 
   return ENV;
 };

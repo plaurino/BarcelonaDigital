@@ -9,6 +9,14 @@ export default Ember.Controller.extend(LoginControlllerMixin, {
       this._super().then(null, function(message) {
         LoginController.set('errorMessage', message);
       });
+    },
+    authenticateFacebook: function() {
+      var _this = this;
+      this.get('session').authenticate('simple-auth-authenticator:torii',
+        'facebook-oauth2').then(function(data){
+           console.log(data);
+        });
+
     }
   }
 });

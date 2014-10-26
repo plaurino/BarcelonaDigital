@@ -1,14 +1,14 @@
 import Ember from 'ember';
+import LoginControlllerMixin from 'simple-auth/mixins/login-controller-mixin';
 
-export default Ember.Controller.extend({
+export default Ember.Controller.extend(LoginControlllerMixin, {
+  authenticator: 'authenticator:kiosko',
   actions: {
     authenticate: function() {
-      window.localStorage.setItem('user-token', window.btoa(this.get('username') + ":" + this.get('password')));
-      Ember.$.ajaxPrefilter(function(options, originalOptions, xhr) {
-          return xhr.setRequestHeader('Authorization', 'Basic ' + localStorage.getItem('user-token'));
+      var LoginController = this;
+      this._super().then(null, function(message) {
+        LoginController.set('errorMessage', message);
       });
-
-      this.transitionToRoute('collections.main');
     }
   }
 });

@@ -1,6 +1,7 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
   activate: function() {
     Ember.$('body').addClass('collection-body');
   },
@@ -13,10 +14,8 @@ export default Ember.Route.extend({
   },
   actions: {
     error: function() {
-      window.Ladda.stopAll();
-      window.localStorage.removeItem('user-token');
-      this.controllerFor('users.login').set('login-error', true);
-      this.transitionTo('users.login');
+      this.get('session').invalidate();
     }
   }
+
 });

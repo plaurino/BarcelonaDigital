@@ -1,3 +1,4 @@
+{{#if session.isAuthenticated}}
 <div {{bind-attr class="display:show-sidebar:hide-sidebar :sidebar-wrapper"}}>
   <ul class="nav nav-pills nav-stacked menu">
     <li class="suscribir">
@@ -17,3 +18,4 @@
     <li class="divider"></li>
   </ul>
 </div>
+{{/if}}

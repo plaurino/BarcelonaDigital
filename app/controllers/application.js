@@ -7,10 +7,6 @@ export default Ember.Controller.extend({
   actions: {
     toggleSidebar: function() {
       this.toggleProperty('showSidebar');
-    },
-    logout: function() {
-      window.localStorage.removeItem('user-token');
-      this.transitionToRoute('users.login');
     }
   }
 });

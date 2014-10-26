@@ -27,7 +27,9 @@ module.exports = function(environment) {
     'img-src': "'self' http://revisbarcelona.com:8081",
     'style-src': "'self' http://fonts.gstatic.com",
     'media-src': "'self'"
-  }
+  };
+
+  ENV['KIOSKO'] = 'http://revisbarcelona:8083';
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -36,6 +38,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
   }
+
 
   if (environment === 'test') {
     // Testem prefers this...
@@ -52,6 +55,23 @@ module.exports = function(environment) {
   if (environment === 'production') {
 
   }
+
+  ENV['simple-auth'] = {
+    authenticationRoute: 'users.login',
+    routeAfterAuthentication: 'collections.main',
+    crossOriginWhitelist: ['http://revisbarcelona.com:8080'],
+    authorizer: 'authorizer:kiosko',
+    store: 'simple-auth-session-store:local-storage'
+  };
+
+
+  ENV['torii'] = {
+    providers: {
+      'facebook-oauth2': {
+        apiKey: '286966254835786'
+      }
+    }
+  };
 
   return ENV;
 };

@@ -67,8 +67,8 @@ module.exports = function(environment) {
 
   ENV['torii'] = {
     providers: {
-      'facebook-oauth2': {
-        apiKey: '286966254835786'
+      'facebook-connect': {
+        appId: '286966254835786'
       }
     }
   };

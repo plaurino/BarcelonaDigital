@@ -10,6 +10,10 @@ Router.map(function() {
     this.route('login');
     this.route('create');
     this.route('recover');
+    //nico
+    this.route('profile',{
+      path: 'menu/user-profile/:id'
+    });
   });
 
   this.route('collections', function() {

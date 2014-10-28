@@ -11,10 +11,13 @@ Router.map(function() {
     this.route('create');
     this.route('recover');
     //nico
-    this.route('profile',{
-      path: 'menu/user-profile/:id'
-    });
+    this.route('contact-us');
+    this.route('profile');
+    this.route('questions');
+    this.route('suscription');
+    //nico-fin
   });
+
 
   this.route('collections', function() {
     this.route('main');

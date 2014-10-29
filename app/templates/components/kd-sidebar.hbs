@@ -4,13 +4,33 @@
     <li class="suscribir">
       {{#link-to 'subscriptions.options' class="sidebar-link"  }}<button class="btn btn-lg btn-suscribe">Suscríbase y sea feliz</button>{{/link-to}}
     </li>
-    <li><a class="sidebar-link" href="#"><span class="icon icon-coin"></span>Revisar suscripcíon</a></li>
+    <li>
+      {{#link-to 'users.suscription' class="sidebar-link"  }}
+      <span class="icon icon-coin"></span>
+      Revisar suscripción
+      {{/link-to}}
+    </li>
     <li class="divider"></li>
-    <li><a class="sidebar-link" href="#"><span class="icon icon-user"></span>Revisar perfil</a></li>
+    <li>
+      {{#link-to 'users.profile' class="sidebar-link"  }}
+        <span class="icon icon-user"></span>
+        Revisar perfil
+      {{/link-to}}
+    </li>
     <li class="divider"></li>
-    <li><a class="sidebar-link"href="#"><span class="icon icon-mail"></span>Contáctenos</a></li>
+    <li>
+      {{#link-to 'users.contact-us' class="sidebar-link"  }}
+        <span class="icon icon-mail"></span>
+        Contáctenos
+      {{/link-to}}
+    </li>
     <li class="divider"></li>
-    <li><a class="sidebar-link"href=""><span class="icon icon-help"></span>Preguntas frecuentes</a></li>
+    <li>
+      {{#link-to 'users.questions' class="sidebar-link"  }}
+        <span class="icon icon-help"></span>
+        Preguntas frecuentes
+      {{/link-to}}
+    </li>
     <li class="divider"></li>
     <li class="logout">
       <button class="sign-out sidebar-link" {{action 'logout'}} ><span class="icon icon-sign-out"></span>Cerrar sesión</button>

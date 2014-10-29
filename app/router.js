@@ -10,7 +10,14 @@ Router.map(function() {
     this.route('login');
     this.route('create');
     this.route('recover');
+    //nico
+    this.route('contact-us');
+    this.route('profile');
+    this.route('questions');
+    this.route('suscription');
+    //nico-fin
   });
+
 
   this.route('collections', function() {
     this.route('main');

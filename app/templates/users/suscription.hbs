@@ -1,3 +1,4 @@
+{{#if session.isAuthenticated}}
 <section class="user-suscription">
 	<div class="container">
 		<div class="row">
@@ -14,8 +15,13 @@
 				<h2>Estado de la suscripción</h2>
 				<p>Tu suscripción es por 3 meses</p>
 				<h3>Regalos y ofertas</h3>
-
+			</div>
+			<div class="danger">
+				<h2>Estas entrando en la zona de no retorno</h2>
+				<p>Si por alguna razón, quieres darte de baja, pudes hacerlo. Te vamos a extrañar :(</p>
+				<button>Dar de baja la suscripción</button>
 			</div>
 		</div>
 	</div>
 </section>
+{{/if}}

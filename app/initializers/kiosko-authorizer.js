@@ -5,10 +5,10 @@ var KioskoAuthorizer = Base.extend({
   authorize: function(jqXHR) {
     if (this.get('session.isAuthenticated')) {
       if (this.get('session.provider') === 'facebook-connect') {
-        jqXHR.setRequestHeader('X-Auth', 'facebook');
-        jqXHR.setRequestHeader('Access_Token', this.get('session.accessToken'));
-      }
-      if (!Ember.isEmpty(this.get('session.token'))) {
+        jqXHR.setRequestHeader('Authorization', 'Facebook ' + this.get('session.accessToken'));
+      } else if (this.get('session.provider') === 'google-oauth2') {
+        jqXHR.setRequestHeader('Authorization', 'Google ' + this.get('session.authorizationCode'));
+      } else if (!Ember.isEmpty(this.get('session.token'))) {
         jqXHR.setRequestHeader('Authorization', 'Basic ' + this.get('session.token'));
       }
     }

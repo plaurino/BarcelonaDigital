@@ -37,6 +37,19 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
+
+
+    ENV['torii'] = {
+      providers: {
+        'facebook-connect': {
+          appId: '286966254835786'
+        },
+        'google-oauth2': {
+          apiKey: '821404490810-uf8km2d84s9q0rvcum37e4l13925i8ic.apps.googleusercontent.com',
+          redirectUri: 'http://local.revisbarcelona.com:4200'
+        }
+      }
+    };
   }
 
 
@@ -54,9 +67,21 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
 
+    ENV['torii'] = {
+      providers: {
+        'facebook-connect': {
+          appId: '286966254835786'
+        },
+        'google-oauth2': {
+          apiKey: '821404490810-uf8km2d84s9q0rvcum37e4l13925i8ic.apps.googleusercontent.com',
+          redirectUri: 'http://revisbarcelona.com:8083/'
+        }
+      }
+    };
   }
 
-  ENV['simple-auth'] = {
+
+ ENV['simple-auth'] = {
     authenticationRoute: 'users.login',
     routeAfterAuthentication: 'collections.main',
     crossOriginWhitelist: ['http://revisbarcelona.com:8080'],
@@ -64,14 +89,6 @@ module.exports = function(environment) {
     store: 'simple-auth-session-store:local-storage'
   };
 
-
-  ENV['torii'] = {
-    providers: {
-      'facebook-connect': {
-        appId: '286966254835786'
-      }
-    }
-  };
 
   return ENV;
 };

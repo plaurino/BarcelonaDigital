@@ -11,10 +11,10 @@ export default Ember.Controller.extend(LoginControlllerMixin, {
       });
     },
     authenticateFacebook: function() {
-      var _this = this;
-      this.get('session').authenticate('simple-auth-authenticator:torii',
-        'facebook-connect');
-
+      this.get('session').authenticate('simple-auth-authenticator:torii', 'facebook-connect');
+    },
+    authenticateGoogle: function() {
+      this.get('session').authenticate('simple-auth-authenticator:torii', 'google-oauth2');
     }
   }
 });

@@ -23,22 +23,22 @@ module.exports = function(environment) {
     'default-src': "'none'",
     'script-src': "'self'",
     'font-src': "'self' http://fonts.gstatic.com/",
-    'connect-src': "'self'",
-    'img-src': "'self' http://revisbarcelona.com:8081",
+    'connect-src': "'self' http://104.131.243.228:8080",
+    'img-src': "'self' http://104.131.243.228:8081",
     'style-src': "'self' http://fonts.gstatic.com",
     'media-src': "'self'"
   };
 
-  ENV.APP.KIOSKO = 'http://revisbarcelona:8083';
+  ENV.APP.KIOSKO = 'http://104.131.243.228:8080';
 
   if (environment === 'development') {
+      ENV.APP.KIOSKO = 'http://104.131.243.228:8080';
+
     // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
-
-    ENV.APP.KIOSKO = 'http://localhost:3000';
 
     ENV['torii'] = {
       providers: {
@@ -84,7 +84,7 @@ module.exports = function(environment) {
  ENV['simple-auth'] = {
   authenticationRoute: 'users.login',
   routeAfterAuthentication: 'collections.main',
-  crossOriginWhitelist: ['http://localhost:3000'],
+  crossOriginWhitelist: ['http://104.131.243.228:8080'],
   authorizer: 'authorizer:kiosko'
  };
 

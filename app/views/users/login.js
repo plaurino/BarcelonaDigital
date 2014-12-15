@@ -3,6 +3,15 @@ import Ember from 'ember';
 export default Ember.View.extend({
   didInsertElement: function() {
     this._super();
-    window.Ladda.bind('.btn-enter');
-  }
+    this.ladda = this.$('.btn-enter').Ladda();
+  },
+
+  onLoading: function() {
+    if (this.get('loading')) {
+      this.ladda.start();
+    } else {
+      this.ladda.stop();
+    }
+  }.property('loading')
+
 });

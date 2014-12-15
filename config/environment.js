@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'luke',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'none',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -29,7 +29,7 @@ module.exports = function(environment) {
     'media-src': "'self'"
   };
 
-  ENV['KIOSKO'] = 'http://revisbarcelona:8083';
+  ENV.APP.KIOSKO = 'http://revisbarcelona:8083';
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -38,11 +38,12 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     ENV.APP.LOG_VIEW_LOOKUPS = true;
 
+    ENV.APP.KIOSKO = 'http://localhost:3000';
 
     ENV['torii'] = {
       providers: {
         'facebook-connect': {
-          appId: '286966254835786'
+          appId: '287878484744563'
         },
         'google-oauth2': {
           apiKey: '821404490810-uf8km2d84s9q0rvcum37e4l13925i8ic.apps.googleusercontent.com',
@@ -66,7 +67,6 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
     ENV['torii'] = {
       providers: {
         'facebook-connect': {
@@ -82,12 +82,11 @@ module.exports = function(environment) {
 
 
  ENV['simple-auth'] = {
-    authenticationRoute: 'users.login',
-    routeAfterAuthentication: 'collections.main',
-    crossOriginWhitelist: ['http://revisbarcelona.com:8080'],
-    authorizer: 'authorizer:kiosko',
-    store: 'simple-auth-session-store:local-storage'
-  };
+  authenticationRoute: 'users.login',
+  routeAfterAuthentication: 'collections.main',
+  crossOriginWhitelist: ['http://localhost:3000'],
+  authorizer: 'authorizer:kiosko'
+ };
 
 
   return ENV;

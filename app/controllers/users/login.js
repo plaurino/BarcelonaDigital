@@ -6,8 +6,10 @@ export default Ember.Controller.extend(LoginControlllerMixin, {
   actions: {
     authenticate: function() {
       var LoginController = this;
-      this._super().then(null, function(message) {
-        LoginController.set('errorMessage', message);
+      this.set('loading', true);
+      this._super().then(null, function() {
+        LoginController.set('login-error', true);
+        //LoginController.set('loading', false);
       });
     },
     authenticateFacebook: function() {

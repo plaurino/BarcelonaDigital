@@ -1,30 +1,51 @@
 import Ember from 'ember';
 import Base from 'simple-auth/authenticators/base';
+import ENV from 'luke/config/environment';
+
 
 var KioskoAuthenticator = Base.extend({
+  tokenEndPoint: ENV.APP.KIOSKO + '/token',
   restore: function(data) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
-        if (!Ember.isEmpty(data.token)) {
-          resolve(data);
-        } else {
-          reject();
-        }
+      if (!Ember.isEmpty(data.token)) {
+        resolve(data);
+      } else {
+        reject();
+      }
     });
   },
 
   authenticate: function(credentials) {
-    return new Ember.RSVP.Promise(function(resolve) {
-      Ember.run(function() {
-        resolve({
-          token: window.btoa(credentials.identification + ':' + credentials.password)
+    var authenticator = this;
+    return new Ember.RSVP.Promise(function(resolve, reject) {
+      Ember.$.ajax({
+        url: authenticator.tokenEndPoint,
+        type: 'POST',
+        contentType: 'application/json',
+        headers: {
+          'Authorization': 'Basic ' + window.btoa(credentials.identification + ':' + credentials.password)
+        }
+      }).then(function(response) {
+        Ember.run(function() {
+          resolve({token: response.session.token});
+        });
+      }, function(xhr) {
+        console.log(xhr);
+        Ember.run(function() {
+          reject(xhr.responseText);
         });
       });
     });
   },
 
   invalidate: function() {
+    var authenticator = this;
+    console.log(this.get('session'));
     return new Ember.RSVP.Promise(function(resolve) {
-        resolve();
+      Ember.$.ajax({url: authenticator.tokenEndPoint, type: 'DELETE'})
+        .always(function() {
+          resolve();
+        });
     });
   }
 });

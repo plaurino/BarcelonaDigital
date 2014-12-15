@@ -1,5 +1,6 @@
 import DS from 'ember-data';
+import ENV from 'luke/config/environment';
 
 export default DS.RESTAdapter.extend({
-  host: 'http://revisbarcelona.com:8080'
+  host: ENV.APP.KIOSKO
 });

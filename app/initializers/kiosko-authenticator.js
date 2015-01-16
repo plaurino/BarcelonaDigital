@@ -4,7 +4,7 @@ import ENV from 'luke/config/environment';
 
 
 var KioskoAuthenticator = Base.extend({
-  tokenEndPoint: ENV.APP.KIOSKO + '/token',
+  tokenEndPoint: ENV.APP.TOKEN_URL,
   restore: function(data) {
     return new Ember.RSVP.Promise(function(resolve, reject) {
       if (!Ember.isEmpty(data.token)) {
@@ -27,6 +27,7 @@ var KioskoAuthenticator = Base.extend({
         }
       }).then(function(response) {
         Ember.run(function() {
+          console.log(response.session);
           resolve({token: response.session.token});
         });
       }, function(xhr) {

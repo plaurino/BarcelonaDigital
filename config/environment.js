@@ -29,10 +29,28 @@ module.exports = function(environment) {
     'media-src': "'self'"
   };
 
+  ENV['simple-auth'] = {
+    authenticationRoute: 'users.login',
+    routeAfterAuthentication: 'collections.main',
+    crossOriginWhitelist: ['http://104.131.243.228:8080'],
+    authorizer: 'authorizer:kiosko'
+  };
+
   ENV.APP.KIOSKO = 'http://104.131.243.228:8080';
 
   if (environment === 'development') {
-      ENV.APP.KIOSKO = 'http://104.131.243.228:8080';
+
+    ENV.contentSecurityPolicy = {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' http://fonts.gstatic.com/",
+      'connect-src': "'self' localhost:3000",
+      'img-src': "'self' http://104.131.243.228:8081",
+      'style-src': "'self' http://fonts.gstatic.com",
+      'media-src': "'self'"
+    };
+
+    ENV.APP.KIOSKO = 'http://localhost:3000';
 
     // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -43,13 +61,20 @@ module.exports = function(environment) {
     ENV['torii'] = {
       providers: {
         'facebook-connect': {
-          appId: '287878484744563'
+          appId: '759804940768080'
         },
         'google-oauth2': {
-          apiKey: '821404490810-uf8km2d84s9q0rvcum37e4l13925i8ic.apps.googleusercontent.com',
-          redirectUri: 'http://local.revisbarcelona.com:4200'
+          apiKey: '623929730156-1pspb352389ccipijalrctveo7tc4ur9.apps.googleusercontent.com',
+          redirectUri: 'http://localhost:4200'
         }
       }
+    };
+
+    ENV['simple-auth'] = {
+      authenticationRoute: 'users.login',
+      routeAfterAuthentication: 'collections.main',
+      crossOriginWhitelist: ['http://localhost:3000'],
+      authorizer: 'authorizer:kiosko'
     };
   }
 
@@ -80,14 +105,7 @@ module.exports = function(environment) {
     };
   }
 
-
- ENV['simple-auth'] = {
-  authenticationRoute: 'users.login',
-  routeAfterAuthentication: 'collections.main',
-  crossOriginWhitelist: ['http://104.131.243.228:8080'],
-  authorizer: 'authorizer:kiosko'
- };
-
+  ENV.APP.TOKEN_URL = ENV.APP.KIOSKO + '/token';
 
   return ENV;
 };

@@ -1,13 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNameBindings: ['selectedPage::hide'],
+  classNameBindings: ['selectedPage:show:hide'],
   classNames: ['issue-page'],
   handleImageLoad: function() {
     var pageView = this;
-    this.$().children('img').one('load', function() {
+    var image = pageView.$().children('img');
+
+    image.one('load', function() {
       Ember.run(function() {
         pageView.set('loaded', true);
+
+        var height = (pageView.$(window).height() - 75);
+        image.attr('height', height);
       });
     });
   }.on('didInsertElement'),
@@ -28,7 +33,8 @@ export default Ember.Component.extend({
     });
   }.on('didInsertElement'),
   selectedPage: function() {
-    return this.get('selected') === this.get('number');
+    var currentSelected = this.get('selected');
+    return currentSelected.contains(this.get('number'));
   }.property('selected'),
   actions: {
     next: function() {

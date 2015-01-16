@@ -16,14 +16,23 @@
   transition: transform 200ms;
 }
 
-.issue-page {
-  position: relative;
-  width: 50%;
-  float: left;
-  margin: auto;
+.issue{
   
-  .issue-page-image {
-    width: 100%;
+  .issue-page {
+    position: relative;
+    width: 50%;
+    float: left;
+    margin: auto;
+
+    &:first-child,
+    &:last-child {
+      float: none;
+      width: auto;
+    }
+
+    .issue-page-image {
+      width: 100%;
+    }
   }
 }
 

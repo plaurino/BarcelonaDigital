@@ -11,8 +11,8 @@ export default Ember.Component.extend({
       Ember.run(function() {
         pageView.set('loaded', true);
 
-        var height = (pageView.$(window).height() - 75);
-        image.attr('height', height);
+        //var height = (pageView.$(window).height() - 75);
+        //image.attr('height', height);
       });
     });
   }.on('didInsertElement'),

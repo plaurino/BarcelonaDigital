@@ -73,24 +73,16 @@ export default Ember.Component.extend({
       this.set('activatedZoom', true);
 
       var view = this;
-      var image = view.$('.issue-page.show img:first-child');
-
-      var width = (view.$(window).width());
-      image.attr('width', width);
-      image.removeAttr('height');
-
+      var image = view.$('.issue-page.show');
+      image.css('width', '100%');
       //console.log('activated zoom');
     },
     zoomOut: function(){
       this.set('activatedZoom', false);
 
       var view = this;
-      var image = view.$('.issue-page.show img:first-child');
-
-      var height = (view.$(window).height() - 75);
-      image.attr('height', height);
-      image.removeAttr('width');
-
+      var image = view.$('.issue-page.show');
+      image.css('width', '50%');
       //console.log('unactivated zoom');
     }
   }

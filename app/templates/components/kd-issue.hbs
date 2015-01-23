@@ -1,12 +1,12 @@
 <div class="issue magazine">
   {{#each page in issues.pages}}
-    {{kd-issue-page src=page.url number=page.number selected=selected next="next" prev="prev"}}
+    {{kd-issue-page src=page.url number=page.number selected=selected activatedZoom=activatedZoom viewedPages=viewedPages next="next" prev="prev" zoomIn="zoomIn" zoomOut="zoomOut"}}
   {{/each}}
 </div>
 
 <menu class="controls">
-  <menuitem class="zoom-in"><button class="btn btn-lg btn-primary" {{action 'zoomIn'}}><span class="fa fa-search-plus"></span></button></menuitem>
-  <menuitem class="zoom-out"><button class="btn btn-lg btn-primary" {{action 'zoomOut'}}><span class="fa fa-search-minus"></span></button></menuitem>
-  <menuitem class="prev-page"><button class="btn btn-lg btn-primary" {{action 'prev'}}><span class="fa fa-chevron-left"></span></button></menuitem>
-  <menuitem class="next-page"><button class="btn btn-lg btn-primary" {{action 'next'}}><span class="fa fa-chevron-right"></span></button></menuitem>
+    <menuitem class="zoom-in"><button class="btn btn-lg btn-primary" {{action 'zoomIn'}}><span class="fa fa-search-plus"></span></button></menuitem>
+    <menuitem class="zoom-out"><button class="btn btn-lg btn-primary" {{action 'zoomOut'}}><span class="fa fa-search-minus"></span></button></menuitem>
+    <menuitem class="prev-page"><button class="btn btn-lg btn-primary" {{action 'prev'}}><span class="fa fa-chevron-left"></span></button></menuitem>
+    <menuitem class="next-page"><button class="btn btn-lg btn-primary" {{action 'next'}}><span class="fa fa-chevron-right"></span></button></menuitem>
 </menu>`

@@ -1,19 +1,24 @@
+html{
+  height: 100%;
+}
+
 body {
-    padding-top: @navbar-height;
-    text-rendering: optimizelegibility;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
+  padding-top: @navbar-height;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  height: 100%
 }
 
 .btn {
-    border: 0;
+  border: 0;
 
-    &:active,
-    &:active:focus,
-    &:focus,
-    &:visited {
-        outline: 0;
-    }
+  &:active,
+  &:active:focus,
+  &:focus,
+  &:visited {
+      outline: 0;
+  }
 }
 
 hr {
@@ -22,9 +27,7 @@ hr {
 }
 
 .navbar-toggle {
-
   @media (min-width: @screen-md) {
     display: none;
-
   }
 }

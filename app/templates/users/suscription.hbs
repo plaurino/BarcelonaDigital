@@ -1,25 +1,82 @@
 {{#if session.isAuthenticated}}
-<section class="user-suscription">
+<section class="account-profile">
 	<div class="container">
 		<div class="row">
-			<h1>Suscripción</h1>
-			<div class="billing">
-				<h2>Datos de Facturación</h2>
-				<p>Tarjeta Visa</p>
-				<ul>
-					<li>Actualizar forma de pago</li>
-					<li>Ver historial de facturación</li>
-				</ul>
-			</div>
-			<div class="suscription-state">
-				<h2>Estado de la suscripción</h2>
-				<p>Tu suscripción es por 3 meses</p>
-				<h3>Regalos y ofertas</h3>
-			</div>
-			<div class="danger">
-				<h2>Estas entrando en la zona de no retorno</h2>
-				<p>Si por alguna razón, quieres darte de baja, pudes hacerlo. Te vamos a extrañar :(</p>
-				<button>Dar de baja la suscripción</button>
+			<div class="container-count col-md-12">
+				<h1>Mi cuenta</h1>
+				<div class="suscriptions">
+					<header class="col-md-3">
+						<h2>Membresia y Facturación</h2>
+					</header>
+					<section class="flex col-md-9">
+						<div class="membresia-items row">
+							<div class="user-account w50 column">
+								<span>nombre@mail.com</span>
+								<span>cuenta creada por mail</span>
+							</div>
+							<div class="user-account-link w50 column">
+								<a href="">actualizar mail y contraseña</a>
+								<a href="">Preferencias de mail</a>
+							</div>
+						</div>
+						<div class="pay row">
+							<div class="pay-info w50 column">
+								<span>VISA XXXX-XXXX-XXXX-1234</span>
+							</div>
+							<div class="pay-link w50 column">
+								<a href="">Actualizar información de pago</a>
+								<a href="">Detalles facturados</a>
+							</div>
+						</div>
+					</section>
+				</div>
+				<div class="details">
+					<header class="col-md-3">
+						<h2>Detalles del plan</h2>
+					</header>
+					<section class="flex col-md-9 row">
+						<div class="details-info w50 column">
+							<span>Plan contratado mensualmente</span>
+						</div>
+						<div class="details-link w50 column">
+							<a href="">Cambiar plan</a>
+						</div>
+					</section>
+				</div>
+				<div class="account">
+					<header class="col-md-3">
+						<h2>Perfil</h2>
+					</header>
+					<section class="col-md-9 row">
+						<div class="account-info w50 column">
+							<span>Pablo Laurino</span>
+							<span>Argentina</span>
+						</div>
+						<div class="account-link w50 column">
+							<a href="">Administrar perfil</a>
+						</div>
+					</section>
+				</div>
+				<div class="oferta">
+					<header class="col-md-3">
+						<h2>Ofertas</h2>
+					</header>
+					<section class="flex col-md-9 row">
+						<div class="oferta-form w50 column">
+							<form class="form-inline">
+								<div class="form-group">
+									<label for="exampleInputNumbre" class="sr-only">Pin</label>
+									<input type="text" class="form-control" placeholder="Código o Pin">
+								</div>
+								<button type="submit" class="btn btn-primary">Canjear</button>
+							</form>
+						</div>
+						<div class="oferta-link w50 column">
+							<a href="">¿Dónde conseguir los códigos?</a>
+							<a href="">¿Para qué sirven los códigos?</a>
+						</div>
+					</section>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   activate: function() {
-    this.transitionTo('users.login');
+    if (this.get('session.isAuthenticated')) {
+      this.transitionTo('collections.main');
+    } else {
+      this.transitionTo('users.login');
+    }
   }
 });

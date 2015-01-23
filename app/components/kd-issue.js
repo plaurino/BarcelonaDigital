@@ -80,9 +80,9 @@ export default Ember.Component.extend({
     zoomIn: function(page){
       var view = this;
 
-      if(page == undefined && view.get('viewedPages') instanceof Array) {
+      if(page === undefined && view.get('viewedPages') instanceof Array) {
         page = view.get('viewedPages')[0];
-      } else if(page == undefined && !(view.get('viewedPages') instanceof Array) && view.get('viewedPages') != undefined) {
+      } else if(page === undefined && !(view.get('viewedPages') instanceof Array) && view.get('viewedPages') !== undefined) {
         page = view.get('viewedPages');
       }
 
@@ -99,9 +99,9 @@ export default Ember.Component.extend({
     zoomOut: function(page){
       var view = this;
 
-      if(page == undefined && view.get('viewedPages') instanceof Array) {
+      if(page === undefined && view.get('viewedPages') instanceof Array) {
         page = view.get('viewedPages')[0];
-      } else if(page == undefined && !(view.get('viewedPages') instanceof Array) && view.get('viewedPages') != undefined) {
+      } else if(page === undefined && !(view.get('viewedPages') instanceof Array) && view.get('viewedPages') !== undefined) {
         page = view.get('viewedPages');
       }
 
@@ -109,16 +109,16 @@ export default Ember.Component.extend({
 
       var selectedPages = [];
 
-      if(page % 2 == 0 && page != 0){
-        if (page-1 != 0 || page-1 != (this.get('issues.pages').content.length - 1)) {
+      if(page % 2 === 0 && page !== 0){
+        if (page-1 !== 0 || page-1 !== (this.get('issues.pages').content.length - 1)) {
           selectedPages.push(page-1);
         }
       }
-      if (page != 0 || page != (this.get('issues.pages').content.length - 1)) {
+      if (page !== 0 || page !== (this.get('issues.pages').content.length - 1)) {
         selectedPages.push(page);
       }
-      if(page % 2 != 0){
-        if (page+1 != 0 || page+1 != (this.get('issues.pages').content.length - 1)) {
+      if(page % 2 !== 0){
+        if (page+1 !== 0 || page+1 !== (this.get('issues.pages').content.length - 1)) {
           selectedPages.push(page+1);
         }
       }

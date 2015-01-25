@@ -1,69 +1,69 @@
 .login-body {
-    background-color: #f9f9f9;
+	background-color: #f9f9f9;
 
-    .container-fluid {
-        // max-width: 980px;
-    }
+	.container-fluid {
+		// max-width: 980px;
+	}
 
-    .form-control {
-        font-weight: 300;
-    }
+	.form-control {
+		font-weight: 300;
+	}
 }
 
 .login {
-    margin-top: 60px;
+	margin-top: 60px;
 }
 
 .social-login {
-    margin: 7% auto;
+	margin: 7% auto;
 }
 
 .btn-enter {
-    width: 100%;
-    margin-bottom: 25px;
+	width: 100%;
+	margin-bottom: 25px;
 }
 
 .btn-social {
-    margin-bottom: (@grid-gutter-width / 2);
+	margin-bottom: (@grid-gutter-width / 2);
 
-    &.btn-facebook,
-    &.btn-google-plus {
-        border: 0;
-    }
+	&.btn-facebook,
+	&.btn-google-plus {
+		border: 0;
+	}
 }
 
 .login-assistance {
-    float: left;
-    font-size: 13px;
+	float: left;
+	font-size: 13px;
 }
 
 
 .separator {
-    position: absolute;
-    .size(100%, 15px);
-    margin-top: -38px;
-    margin-left: (@grid-gutter-width / -2);
-    line-height: 15px;
-    text-align: center;
-    color: #999;
+	position: absolute;
+	.size(100%, 15px);
+	margin-top: -21px;
+	margin-left: (@grid-gutter-width / -2);
+	line-height: 15px;
+	text-align: center;
+	color: #999;
 
-    &:before,
-    &:after {
-        position: absolute;
-        top: 50%;
-        display: block;
-        .size(38%, 1px);
-        background: #ddd;
-        content: "";
-    }
+	&:before,
+	&:after {
+		position: absolute;
+		top: 50%;
+		display: block;
+		.size(38%, 1px);
+		background: #ddd;
+		content: "";
+	}
 
-    &:before {
-        left: (@grid-gutter-width / 2);
-    }
+	&:before {
+		left: (@grid-gutter-width / 2);
+	}
 
-    &:after {
-        right: (@grid-gutter-width / 2);
-    }
+	&:after {
+		right: (@grid-gutter-width / 2);
+	}
 }
 
 .email-login {
@@ -99,46 +99,46 @@
 }
 
 @media (min-width: @screen-sm) {
-    .login {
-        position: absolute;
-        top: 25%;
-        left: 50%;
-        .translate(-50%,0);
-    }
+	.login {
+		position: absolute;
+		top: 25%;
+		left: 50%;
+		.translate(-50%,0);
+	}
 
-    .social-login {
-        padding-right: 2%;
-    }
+	.social-login {
+		padding-right: 2%;
+	}
 
-    .custom-login {
-        padding-left: 5%;
-    }
+	.custom-login {
+		padding-left: 5%;
+	}
 
-    .separator {
-        left: 0;
-        .size(15px, 100%);
-        padding-top: 23%;
-        margin: 0;
+	.separator {
+		left: 0;
+		.size(15px, 100%);
+		padding-top: 23%;
+		margin: 0;
 
-        &:before,
-        &:after {
-            .size(1px, 40%);
-            right: 0;
-            left: 50%;
-        }
+		&:before,
+		&:after {
+			.size(1px, 40%);
+			right: 0;
+			left: 50%;
+		}
 
-        &:before {
-            top: 0;
-        }
+		&:before {
+			top: 0;
+		}
 
-        &:after {
-            top: auto;
-            bottom: 0;
-        }
-    }
+		&:after {
+			top: auto;
+			bottom: 0;
+		}
+	}
 
-    .btn-enter {
-        width: 40%;
-        float: right;
-    }
+	.btn-enter {
+		width: 40%;
+		float: right;
+	}
 }

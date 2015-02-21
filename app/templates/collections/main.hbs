@@ -3,3 +3,13 @@
 
     {{kd-collection issues=this}}
 </section>
+
+{{#if isPending}}
+  {{kd-modal title="Pago pendiente" body="El pago esta pendiente. Su suscripcion se efectivizara una vez el pago sea acreditado."}}
+{{/if}}
+{{#if isCanceled}}
+  {{kd-modal title="Pago cancelado" body="El pago ha sido cancelado o a ocurrido un error. Por favor vuelva a intentarlo mas tarde."}}
+{{/if}}
+{{#if isApproved}}
+  {{kd-modal title="Pago aprobado" body="El pago ha sido aprobado. Ya estas subscripto a Revista Barcelona."}}
+{{/if}}

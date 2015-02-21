@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'luke',
     environment: environment,
     baseURL: '/',
-    locationType: 'none',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -45,7 +45,7 @@ module.exports = function(environment) {
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com/",
       'connect-src': "'self' localhost:3000",
-      'img-src': "'self' http://104.131.243.228:8081",
+      'img-src': "'self' localhost:4200",
       'style-src': "'self' http://fonts.gstatic.com",
       'media-src': "'self'"
     };

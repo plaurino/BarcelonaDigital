@@ -16,3 +16,6 @@
 npm-debug.log
 testem.log
 /.idea
+
+#images magazine
+/public/assets/revista/*

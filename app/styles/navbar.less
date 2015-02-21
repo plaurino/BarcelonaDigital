@@ -1,48 +1,49 @@
 .barcelona-nav {
   background: @cyan-header;
 
-    .barcelona-logo {
-        .brand-logo(220px; 100%);
-        margin-left: (@grid-gutter-width / 2);
-        text-indent: -9999px;
-    }
+	.barcelona-logo {
+		.brand-logo(220px; 100%);
+		margin-left: (@grid-gutter-width / 2);
+		text-indent: -9999px;
+	}
 
-    > .container-fluid .barcelona-logo {
-        margin-left: (@grid-gutter-width / 2);
-    }
+	> .container-fluid .barcelona-logo {
+		margin-left: (@grid-gutter-width / 2);
+	}
 
-    .fa-sign-out {
-        width: 75px;
-        height: 65px;
-        line-height: 65px;
-        background: none;
-        border: 0;
-        outline: 0;
-        color: #f1f1f1;
-        font-size: 30px;
+	.fa-sign-out {
+		width: 75px;
+		height: 65px;
+		line-height: 65px;
+		background: none;
+		border: 0;
+		outline: 0;
+		color: #f1f1f1;
+		font-size: 30px;
 
-        &:hover {
-            color: @magenta;
-        }
+		&:hover {
+			color: @magenta;
+		}
 
-        &:active,
-        &:hover,
-        &:focus {
-            outline: 0;
-        }
-    }
+		&:active,
+		&:hover,
+		&:focus {
+			outline: 0;
+		}
+	}
 }
 
 .navbar-header {
+	width: 100%;
   &:extend(.clearfix all);
   @media (min-width: @screen-md) {
-    float: left;
+	float: left;
   }
 }
 
 .navbar-toggle {
   display: none;
   @media (max-width: @screen-md) {
-    display: block;
+	display: block;
   }
 }

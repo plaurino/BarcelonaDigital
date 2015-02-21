@@ -1,46 +1,48 @@
 <section class="login">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-5 social-login">
-                <a class="btn btn-block btn-social btn-lg btn-facebook" {{action "authenticateFacebook"}}>
-                    <i class="fa fa-facebook"></i>
-                    Ingrese con Facebook
-                </a>
+		<div class="container">
+				<div class="row">
+						<div class="col-sm-5 social-login">
+								<a class="btn btn-block btn-social btn-lg btn-facebook" {{action "authenticateFacebook"}}>
+										<i class="fa fa-facebook"></i>
+										Ingrese con Facebook
+								</a>
 
-                <a class="btn btn-block btn-social btn-lg btn-google-plus" {{action "authenticateGoogle"}}>
-                    <i class="fa fa-google-plus"></i>
-                    Ingrese con Google
-                </a>
-            </div>
+								<a class="btn btn-block btn-social btn-lg btn-google-plus" {{action "authenticateGoogle"}}>
+										<i class="fa fa-google-plus"></i>
+										Ingrese con Google
+								</a>
+						</div>
 
-            <div class="col-sm-7 custom-login">
-                <span class="separator">ó</span>
-                <div class="email-login">
-                {{#if login-error}}
-                  <span class="login-error">Error: usuario o contraseña incorrectos</span>
-                {{/if}}
+						<div class="col-sm-7 custom-login">
+								<span class="separator">ó</span>
+								<div class="email-login">
+								{{#if login-error}}
+									<span class="login-error">Error: usuario o contraseña incorrectos</span>
+								{{/if}}
 
-                <form role="form" class="login-form" {{action "authenticate" on="submit"}}>
-                    <div class="form-group">
-                      {{input type="email" placeholder="Usuario" name="InputUsername" value=identification class="form-control input-lg"}}
-                    </div>
+								<form role="form" class="login-form" {{action "authenticate" on="submit"}}>
+										<div class="form-group">
+											{{input type="email" placeholder="Usuario" name="InputUsername" value=identification class="form-control input-lg"}}
+										</div>
 
-                    <div class="form-group">
-                      {{input type="password" placeholder="Contraseña" name="InputPassword" value=password class="form-control input-lg"}}
-                    </div>
+										<div class="form-group">
+											{{input type="password" placeholder="Contraseña" name="InputPassword" value=password class="form-control input-lg"}}
+										</div>
 
-                    <button type="submit" class="ladda-button btn btn-block btn-lg btn-primary btn-enter" data-style="zoom-out">
-                        <span class="ladda-label">Ingrese</span>
-                        <span class="ladda-spinner"></span>
-                    </button>
+										<button type="submit" class="ladda-button btn btn-block btn-lg btn-primary btn-enter" data-style="zoom-out">
+												<span class="ladda-label">Ingrese</span>
+												<svg class="spinner" width="30px" height="30px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+	   											<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+												</svg>
+										</button>
 
-                    <div class="login-assistance">
-                        <span class="forgot-password">{{#link-to 'users.recover'}}¿Olvidó su contraseña?{{/link-to}}</span>
-                        <span class="forgot-password">{{#link-to 'users.create'}}Regístrarme{{/link-to}}</span>
-                    </div>
-                </form>
-              </div>
-            </div>
-        </div>
-    </div>
+										<div class="login-assistance">
+												<span class="forgot-password">{{#link-to 'users.recover'}}¿Olvidó su contraseña?{{/link-to}}</span>
+												<span class="forgot-password">{{#link-to 'users.create'}}Regístrarme{{/link-to}}</span>
+										</div>
+								</form>
+							</div>
+						</div>
+				</div>
+		</div>
 </section>

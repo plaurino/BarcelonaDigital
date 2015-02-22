@@ -19,12 +19,15 @@ module.exports = function(environment) {
     }
   };
 
+
+  // production environment config (is default)
+
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
     'script-src': "'self'",
     'font-src': "'self' http://fonts.gstatic.com/",
-    'connect-src': "'self' http://104.131.243.228:8080",
-    'img-src': "'self' http://104.131.243.228:8081",
+    'connect-src': "'self' http://104.236.50.158:4200",
+    'img-src': "'self' http://104.236.50.158:4200",
     'style-src': "'self' http://fonts.gstatic.com",
     'media-src': "'self'"
   };
@@ -32,11 +35,26 @@ module.exports = function(environment) {
   ENV['simple-auth'] = {
     authenticationRoute: 'users.login',
     routeAfterAuthentication: 'collections.main',
-    crossOriginWhitelist: ['http://104.131.243.228:8080'],
+    crossOriginWhitelist: ['http://104.236.50.158:3000'],
     authorizer: 'authorizer:kiosko'
   };
 
-  ENV.APP.KIOSKO = 'http://104.131.243.228:8080';
+  ENV.APP.KIOSKO = 'http://104.236.50.158:3000';
+
+  ENV['torii'] = {
+    providers: {
+      'facebook-connect': {
+        appId: '759804940768080'
+      },
+      'google-oauth2': {
+        apiKey: '623929730156-1pspb352389ccipijalrctveo7tc4ur9.apps.googleusercontent.com',
+        redirectUri: 'http://104.236.50.158:4200'
+      }
+    }
+  };
+
+
+  // development environment config
 
   if (environment === 'development') {
 
@@ -79,6 +97,8 @@ module.exports = function(environment) {
   }
 
 
+  // testing environment config
+
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
@@ -89,20 +109,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-  }
-
-  if (environment === 'production') {
-    ENV['torii'] = {
-      providers: {
-        'facebook-connect': {
-          appId: '286966254835786'
-        },
-        'google-oauth2': {
-          apiKey: '821404490810-uf8km2d84s9q0rvcum37e4l13925i8ic.apps.googleusercontent.com',
-          redirectUri: 'http://revisbarcelona.com:8083/'
-        }
-      }
-    };
   }
 
   ENV.APP.TOKEN_URL = ENV.APP.KIOSKO + '/token';

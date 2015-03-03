@@ -11,7 +11,7 @@
 		
 
 		.magazine-display {
-			padding: 0 210px 0 1%;
+			padding: 0; /*0 210px 0 1%*/ 
 			margin: 0;
 			.clearfix();
 
@@ -26,7 +26,11 @@
 			padding: 10px;
 			list-style: none;
 			overflow: hidden;
-			min-width: 138px;
+			min-width: 160px;
+
+			@media (max-width: 420px) {
+				min-width: 138px;
+			}
 
 			> a {
 				position:relative;
@@ -140,7 +144,7 @@
 			width: 100% / 5;
 
 			.info-next {
-				font-size: 1.6rem;
+				font-size: 1.4rem;
 			}
 		}
 		
@@ -149,7 +153,7 @@
 			width: 100% / 6;
 
 			.info-next {
-				font-size: 1.6rem;}
+				font-size: 1.4rem;}
 			}
 		}
 	}

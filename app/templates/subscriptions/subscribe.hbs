@@ -1,1 +1,76 @@
-<a {{bind-attr href=mp_payment_link}} name="MP-Checkout" class="lightblue-M-Ov-ArOn" mp-mode="redirect">Pagar con MercadoPago</a>
+<section class="display-feedback container">
+	<div class="display congratulation col-sm-6 col-sm-offset-3">
+		<h1 class="tittle-received">
+			Felicitaciones
+		</h1>
+		<div class="content">
+			<div class="result">
+				<span class="ic sucess icon-congratulation"></span>
+				<h4>Tu compra ha sido procesada con éxito.</h4>
+			</div>
+			<p>Haz contratado el plan por <strong>TANTOS MESES</strong></p>
+			<p>Ya Puedes de disfrutar de próximas Revistas Barcelona.</p>
+		</div>
+		<div class="countdown">
+			<span>Este mensaje se cerrará en TIME</span>
+		</div>
+		<div class="options">
+			<button class="btn btn-info">Volver a mi biblioteca</button>
+			<button class="btn btn-info">Revisar mi suscripción</button>
+		</div>
+	</div>
+	<div class="display error col-sm-6 col-sm-offset-3">
+		<h1 class="tittle-received">
+			Ha sucedido algo
+		</h1>
+		<div class="content">
+			<div class="result">
+				<span class="ic sucess icon-error"></span>
+				<h3>Tu compra no pudo ser procesada.</h3>
+			</div>
+			<p>Vuelve a intentar. Si el problema persiste, puedes revisar <a href="">Preguntas Frecuentes</a> sobre pagos.</p>
+			<p>O <a href="">escribenos</a> y cuentanos sobre tu problema.</p>
+		</div>
+		<div class="countdown">
+			<span>Este mensaje se cerrará en TIME</span>
+		</div>
+		<div class="options">
+			<button class="btn btn-info">Volver a intentarlo</button>
+			<button class="btn btn-info">Volver a la Biblioteca</button>
+		</div>
+	</div>
+	<div class="display cancelar col-sm-6 col-sm-offset-3">
+		<h1 class="tittle-received">
+			¿Verdaderamente quieres dejarnos?
+		</h1>
+		<div class="content">
+			<div class="result">
+				<span class="ic sucess icon-cancel"></span>
+				<h3>Has cancelado la suscripción a la Revista</h3>
+			</div>
+			<p>Si esto es un error, no te preocupes, puedes volver a suscribirte cuendo quieras, sin costo extra y conservando tus números págos.</p>
+			<div class="options margin">
+				<button class="btn btn-info">Volver a la biblioteca</button>
+				<button class="btn btn-info">Volver a suscribirme</button>
+			</div>
+			<div class="countdown">
+				<span>Este mensaje se cerrará en TIME</span>
+			</div>
+			<p>Si tienes algo que contarnos, para mejorar o simplemente putearnos, escribenos en el siguiente formulario.</p>
+			<form action="cancel">
+				<div class="form-group">
+					<input class="form-control" type="text" for="name" placeholder="Tu nombre" required>
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="email" for="email" placeholder="Tu correo electronico" required>
+				</div>
+				<div class="form-group">
+					<textarea class="form-control" name="comentario" id="" cols="30" rows="10"></textarea>
+				</div>
+				<div class="form-group">
+					<input type="submit" class="btn btn-success form-control">
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

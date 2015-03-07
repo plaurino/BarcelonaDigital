@@ -1,111 +1,104 @@
-{{!-- <menu>
-  <menuitem>{{#link-to 'subscriptions.subscribe' 0}} Suscribirse (Solo tarjeta de crédito){{/link-to}}</menuitem>
-  <menuitem>{{#link-to 'subscriptions.subscribe' 3}} Suscribirme por 3 meses {{/link-to}}</menuitem>
-  <menuitem>{{#link-to 'subscriptions.subscribe' 6}} Suscribirme por 6 meses {{/link-to}}</menuitem>
-</menu>
- --}}
-
- <section class="option-suscribe">
- 	<div class="container">
- 		<div class="row">
- 			<div class="col-md-10 col-md-offset-1 col-xs-12">
- 				<h2 class="tittle text-center">Suscribiendote tendrás acceso instantaneo a los numeros de la Revista Barcelona</h2>
- 				<p class="hello">Suscríbase a BarcelonaDigital y tenga acceso instantáneo a todas las ediciones
- 					de Revista Barcelona (a partir de la fecha de su suscripción) en hasta tres 
- 					dispositivos digitales. Como pensamos en todo, te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
- 				<div class="paiment-plan row">
- 					<h3 class="sub-tittle"><span class="icon-number1 number"></span>Elige el plan que te guste</h3>
- 					<div class="small container-plan">
- 						<div class="plan col-sm-4 col-xs-12" {{action "setSubscription3"}}>
- 							<div class="head">
+<section class="option-suscribe">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 col-xs-12">
+				<h2 class="tittle text-center">Suscribiendote tendrás acceso instantaneo a los numeros de la Revista Barcelona</h2>
+				<p class="hello">Suscríbase a BarcelonaDigital y tenga acceso instantáneo a todas las ediciones
+					de Revista Barcelona (a partir de la fecha de su suscripción) en hasta tres 
+					dispositivos digitales. Como pensamos en todo, te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
+				<div class="paiment-plan row">
+					<h3 class="sub-tittle"><span class="icon-number1 number"></span>Elige el plan que te guste</h3>
+					<div class="small container-plan">
+						<div class="plan col-sm-4 col-xs-12" {{action "setSubscription3"}}>
+							<div class="head">
+ 							<p class="signo">$</p>
+ 							<p class="precio">85</p>
+ 							<p class="moneda">Pesos</p>
+	 					</div>
+ 						<div class="ventajas">
+ 							<h4 class="periodo ch-3">3 Meses</h4>
+ 						 	<p class="items">Acceso a todos los numeros*</p>
+ 						 	<p class="items">Crédito, Débito o Deposito</p>
+ 						 	<p class="items">Renovación automática</p>
+ 						 	<div class="choise">
+ 						 		<label for="3-months" class="select-plan">
+	 						 		{{radio-button value="3" checked=selectedSubscription name="suscription-opcion" id="3-months"class="select-plan"}}
+	 						 		<span>Quiero éste plan</span>
+ 						 		</label>
+	 						</div>
+ 						</div>
+	 				</div>
+	 					<div class="plan card col-sm-4 col-xs-12 " {{action "setSubscription0"}}>
+	 						<div class="head">
 	 							<p class="signo">$</p>
-	 							<p class="precio">85</p>
+	 							<p class="precio">30</p>
 	 							<p class="moneda">Pesos</p>
-		 					</div>
+	 						</div>
 	 						<div class="ventajas">
-	 							<h4 class="periodo ch-3">3 Meses</h4>
+	 							<h4 class="periodo">Mensual</h4>
+	 							<p class="items">Renovable todos los meses</p>
+	 						 	<p class="items">Solo Tarjeta de Crédito</p>
 	 						 	<p class="items">Acceso a todos los numeros*</p>
-	 						 	<p class="items">Crédito, Débito o Deposito</p>
-	 						 	<p class="items">Renovación automática</p>
 	 						 	<div class="choise">
-	 						 		<label for="3-months" class="select-plan">
-		 						 		{{radio-button value="3" checked=selectedSubscription name="suscription-opcion" id="3-months"class="select-plan"}}
+	 						 		<label for="monthly" class="select-plan">
+		 						 		{{radio-button checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan"}}
 		 						 		<span>Quiero éste plan</span>
 	 						 		</label>
-		 						</div>
+	 						 	</div>
 	 						</div>
-		 				</div>
-		 					<div class="plan card col-sm-4 col-xs-12 " {{action "setSubscription0"}}>
-		 						<div class="head">
-		 							<p class="signo">$</p>
-		 							<p class="precio">30</p>
-		 							<p class="moneda">Pesos</p>
-		 						</div>
-		 						<div class="ventajas">
-		 							<h4 class="periodo">Mensual</h4>
-		 							<p class="items">Renovable todos los meses</p>
-		 						 	<p class="items">Solo Tarjeta de Crédito</p>
-		 						 	<p class="items">Acceso a todos los numeros*</p>
-		 						 	<div class="choise">
-		 						 		<label for="monthly" class="select-plan">
-			 						 		{{radio-button checked=selectedSubscription value="0" name="suscription-opcion" id="monthly" class="select-plan"}}
-			 						 		<span>Quiero éste plan</span>
-		 						 		</label>
-		 						 	</div>
-		 						</div>
-		 					</div>
-		 					<div class="plan col-sm-4 col-xs-12" {{action "setSubscription6"}}>
-		 						<div class="head">
-		 							<p class="signo">$</p>
-		 							<p class="precio">160</p>
-		 							<p class="moneda">Pesos</p>
-		 						</div>
-		 						<div class="ventajas">
-		 							<h4 class="periodo">6 Meses</h4>
-		 						 	<p class="items">Acceso a todos los número*</p>
-		 						 	<p class="items">Renovación automática</p>
-		 						 	<p class="items">Crédito, Débito o Deposito</p>
-		 						 	<div class="choise">
-		 						 		<label for="6-months" class="select-plan">
-			 						 		{{radio-button value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" }}
-			 						 		<span>Quiero éste plan</span>
-	 						 			</label>
-		 							</div>
-		 						</div>
-		 					</div>
- 					</div>
- 				</div>
-          {{#if selectedSubscription}}
-            {{#unless payments}}
- 				<div class="paiment-method">
- 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
- 					    <div class="choise-plan-process">
-					        <div class="info text-info bg-info text-center circle">
-					    	      Generando método de pago.
-					    	      <br> <!-- salto para circle -->
-	 						        <div class="circle1"></div>
-					            <div class="circle2"></div>
-					           <div class="circle3"></div>
-					         </div>
- 					      </div>
- 				</div>
-             {{/unless}}
-          {{/if}}
-
-          {{#if payments}}
- 				<div class="paiment-method">
- 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
- 					    <div class="col-md-12 col-xs-12 method">
- 						    <ol class="item">
- 							    <li class="select"><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-paypal"></span>Paypal</button></li>
-                   {{#with payments}}
- 							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-mercado"></span>Mercado Pago</button></a></li>
-                   {{/with}}
- 						    </ol>
- 					   </div>
- 				</div>
+	 					</div>
+	 					<div class="plan col-sm-4 col-xs-12" {{action "setSubscription6"}}>
+	 						<div class="head">
+	 							<p class="signo">$</p>
+	 							<p class="precio">160</p>
+	 							<p class="moneda">Pesos</p>
+	 						</div>
+	 						<div class="ventajas">
+	 							<h4 class="periodo">6 Meses</h4>
+	 						 	<p class="items">Acceso a todos los número*</p>
+	 						 	<p class="items">Renovación automática</p>
+	 						 	<p class="items">Crédito, Débito o Deposito</p>
+	 						 	<div class="choise">
+	 						 		<label for="6-months" class="select-plan">
+		 						 		{{radio-button value="6" checked=selectedSubscription  name="suscription-opcion" id="6-months" class="select-plan" }}
+		 						 		<span>Quiero éste plan</span>
+ 						 			</label>
+	 							</div>
+	 						</div>
+	 					</div>
+					</div>
+				</div>
+        {{#if selectedSubscription}}
+          {{#unless payments}}
+				<div class="paiment-method">
+					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
+					    <div class="choise-plan-process">
+				        <div class="info text-info bg-info text-center circle">
+				    	      Generando método de pago.
+				    	      <br> <!-- salto para circle -->
+ 						        <div class="circle1"></div>
+				            <div class="circle2"></div>
+				           <div class="circle3"></div>
+				         </div>
+					      </div>
+				</div>
+           {{/unless}}
         {{/if}}
- 			</div>
- 		</div>
- 	</div>
- </section>
+
+        {{#if payments}}
+				<div class="paiment-method">
+					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
+					    <div class="col-md-12 col-xs-12 method">
+						    <ol class="item">
+							    <li class="select"><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-paypal"></span>Paypal</button></li>
+                 {{#with payments}}
+							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-mercado"></span>Mercado Pago</button></a></li>
+                 {{/with}}
+						    </ol>
+					   </div>
+				</div>
+      {{/if}}
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,4 +1,6 @@
 <section class="display-feedback container">
+
+{{#if approved}}
 	<div class="display congratulation col-sm-6 col-sm-offset-3">
 		<h1 class="tittle-received">
 			Felicitaciones
@@ -11,14 +13,33 @@
 			<p>Haz contratado el plan por <strong>TANTOS MESES</strong></p>
 			<p>Ya Puedes de disfrutar de próximas Revistas Barcelona.</p>
 		</div>
-		<div class="countdown">
-			<span>Este mensaje se cerrará en TIME</span>
-		</div>
 		<div class="options">
 			<button class="btn btn-info">Volver a mi biblioteca</button>
 			<button class="btn btn-info">Revisar mi suscripción</button>
 		</div>
 	</div>
+{{/if}}
+{{#if pending}}
+    <div class="display congratulation col-sm-6 col-sm-offset-3">
+        <h1 class="tittle-received">
+            Felicitaciones
+        </h1>
+        <div class="content">
+            <div class="result">
+                <span class="ic sucess icon-congratulation"></span>
+                <h4>Tu compra ha sido procesada con éxito.
+                    Pero permanecera como pendiente hasta que se acredite el pago.</h4>
+            </div>
+            <p>Haz contratado el plan por <strong>TANTOS MESES</strong></p>
+            <p>Ya Puedes de disfrutar de próximas Revistas Barcelona.</p>
+        </div>
+        <div class="options">
+            <button class="btn btn-info">Volver a mi biblioteca</button>
+            <button class="btn btn-info">Revisar mi suscripción</button>
+        </div>
+    </div>
+{{/if}}
+{{#if error}}
 	<div class="display error col-sm-6 col-sm-offset-3">
 		<h1 class="tittle-received">
 			Ha sucedido algo
@@ -31,15 +52,18 @@
 			<p>Vuelve a intentar. Si el problema persiste, puedes revisar <a href="">Preguntas Frecuentes</a> sobre pagos.</p>
 			<p>O <a href="">escribenos</a> y cuentanos sobre tu problema.</p>
 		</div>
-		<div class="countdown">
-			<span>Este mensaje se cerrará en TIME</span>
-		</div>
 		<div class="options">
 			<button class="btn btn-info">Volver a intentarlo</button>
 			<button class="btn btn-info">Volver a la Biblioteca</button>
 		</div>
 	</div>
-	<div class="display cancelar col-sm-6 col-sm-offset-3">
+{{/if}}
+
+<div class="countdown">
+    <span>Este mensaje se cerrará en {{second}}</span>
+</div>
+
+	<!-- <div class="display cancelar col-sm-6 col-sm-offset-3">
 		<h1 class="tittle-received">
 			¿Verdaderamente quieres dejarnos?
 		</h1>
@@ -72,5 +96,5 @@
 				</div>
 			</form>
 		</div>
-	</div>
+	</div> -->
 </section>

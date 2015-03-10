@@ -4,7 +4,7 @@
 			<div class="col-md-10 col-md-offset-1 col-xs-12">
 				<h2 class="tittle text-center">Suscribiendote tendrás acceso instantaneo a los numeros de la Revista Barcelona</h2>
 				<p class="hello">Suscríbase a BarcelonaDigital y tenga acceso instantáneo a todas las ediciones
-					de Revista Barcelona (a partir de la fecha de su suscripción) en hasta tres 
+					de Revista Barcelona (a partir de la fecha de su suscripción) en hasta tres
 					dispositivos digitales. Como pensamos en todo, te damos posibilidades de poder elegir tu plan, y la forma más comoda de poder pagarlo</p>
 				<div class="paiment-plan row">
 					<h3 class="sub-tittle"><span class="icon-number1 number"></span>Elige el plan que te guste</h3>
@@ -90,8 +90,8 @@
 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
 					    <div class="col-md-12 col-xs-12 method">
 						    <ol class="item">
-							    <li class="select"><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-paypal"></span>Paypal</button></li>
-                 {{#with payments}}
+                {{#with payments}}
+                  <li class="select"><a {{bind-attr href=pp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-paypal"></span>Paypal</button></a></li>
 							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-mercado"></span>Mercado Pago</button></a></li>
                  {{/with}}
 						    </ol>

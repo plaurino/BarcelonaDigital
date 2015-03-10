@@ -31,9 +31,7 @@ Router.map(function() {
 
   this.resource('subscriptions', function() {
     this.route('options');
-    this.route('subscribe', {
-      path: 'subscribe/:id'
-    });
+    this.route('subscribe');
   });
 });
 

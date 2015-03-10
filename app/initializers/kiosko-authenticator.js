@@ -27,11 +27,11 @@ var KioskoAuthenticator = Base.extend({
         }
       }).then(function(response) {
         Ember.run(function() {
-          console.log(response.session);
+          //console.log(response.session);
           resolve({token: response.session.token});
         });
       }, function(xhr) {
-        console.log(xhr);
+        //console.log(xhr);
         Ember.run(function() {
           reject(xhr.responseText);
         });
@@ -41,7 +41,7 @@ var KioskoAuthenticator = Base.extend({
 
   invalidate: function() {
     var authenticator = this;
-    console.log(this.get('session'));
+    //console.log(this.get('session'));
     return new Ember.RSVP.Promise(function(resolve) {
       Ember.$.ajax({url: authenticator.tokenEndPoint, type: 'DELETE'})
         .always(function() {

@@ -1,13 +1,16 @@
 {{#if session.isAuthenticated}}
 <div {{bind-attr class="display:show-sidebar:hide-sidebar :sidebar-wrapper"}}>
   <ul class="nav nav-pills nav-stacked menu">
-    <li>
-      <div class="suscripto">ESTAS SUSCRIPTO</div>
-    </li>
-    <li class="divider"></li>
-    <li class="suscribir">
-      {{#link-to 'subscriptions.options' class="sidebar-link"  }}<button class="btn btn-lg btn-suscribe">Suscríbase y sea feliz</button>{{/link-to}}
-    </li>
+    {{#if subscribed}}
+        <li>
+            <div class="suscripto">ESTAS SUSCRIPTO</div>
+        </li>
+        <li class="divider"></li>
+    {{else}}
+      <li class="suscribir">
+        {{#link-to 'subscriptions.options' class="sidebar-link"  }}<button class="btn btn-lg btn-suscribe">Suscríbase y sea feliz</button>{{/link-to}}
+      </li>
+    {{/if}}
     <li>
       {{#link-to 'users.suscription' class="sidebar-link"  }}
       <span class="icon icon-user"></span>

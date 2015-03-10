@@ -6,6 +6,7 @@ export default Ember.Controller.extend({
     controller.set('payments', false);
     this.store.find('payment', this.get('selectedSubscription'))
       .then(function(data) {
+        console.log(data);
         controller.set('payments', data);
       });
   }.observes('selectedSubscription'),

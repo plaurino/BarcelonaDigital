@@ -9,8 +9,8 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
     if(params.collection_id !== null) {
 
-      //register mercadopago payment
-      Ember.$.ajax(config.APP.KIOSKO + '/payments/mp-process', {
+      //register mercadopago regular payment
+      Ember.$.ajax(config.APP.KIOSKO + '/payments/mp-regular-process', {
         "type": 'POST',
         "dataType": 'JSON',
         "data": {
@@ -26,7 +26,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         router.get('controller').timer();
       });
 
-    } else if(params.paymentId) {
+    } else if(params.paymentId != null) {
 
       //register paypal payment
       Ember.$.ajax(config.APP.KIOSKO + '/payments/pp-process', {
@@ -45,6 +45,24 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         Ember.$(document).find('.message').append(data.responseJSON.error);
         router.get('controller').timer();
       });
+    } else if(params.preapproval_id !== null) {
+
+      //register mercadopago recurrent payment
+      Ember.$.ajax(config.APP.KIOSKO + '/payments/mp-recurrent-process', {
+        "type": 'POST',
+        "dataType": 'JSON',
+        "data": {
+          id: params.preapproval_id
+        }
+      }).done(function (data) {
+        if(data.status === 'OK') {
+          router.get('controller').timer();
+        }
+      }).fail(function(data){
+        Ember.$(document).find('.message').append(data.responseJSON.error);
+        router.get('controller').timer();
+      });
+
     }
     var subscriptions = this.store.find('subscription');
 

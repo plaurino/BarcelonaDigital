@@ -19,5 +19,5 @@ export default Ember.Component.extend({
         view.set('subscribed', false);
       }
     });
-  }.on('didInsertElement')
+  }.on('init')
 });

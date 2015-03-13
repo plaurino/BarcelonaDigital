@@ -7,5 +7,6 @@ export default DS.Model.extend({
   expired_at: DS.attr('date'),
   duration: DS.attr('number'),
   status: DS.attr('string'),
-  owner: DS.belongsTo('user')
+  owner: DS.belongsTo('user'),
+  payment: DS.belongsTo('payment')
 });

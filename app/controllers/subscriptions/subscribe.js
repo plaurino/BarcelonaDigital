@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
     'preference_id',
     'external_reference',
     'payment_type',
+    'preapproval_id',
     'paymentId',
     'token',
     'PayerID'
@@ -20,6 +21,7 @@ export default Ember.Controller.extend({
   preference_id: null,
   external_reference: null,
   payment_type: null,
+  preapproval_id: null,
 
   //paypal params
   paymentId: null,
@@ -33,7 +35,7 @@ export default Ember.Controller.extend({
     return this.get('collection_status') === 'null';
   }.property('collection_status'),
   approved: function() {
-    return this.get('collection_status') === 'approved' || this.get('paymentId') != null;
+    return this.get('collection_status') === 'approved' || this.get('paymentId') != null || this.get('preapproval_id') != null;
   }.property('collection_status'),
 
   init: function () {

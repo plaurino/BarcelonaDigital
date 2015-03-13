@@ -62,13 +62,13 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com/",
-      'connect-src': "'self' localhost:3000",
-      'img-src': "'self' localhost:4200",
+      'connect-src': "'self' barcelonadigital-dev.com:3000",
+      'img-src': "'self' barcelonadigital-dev.com:4200",
       'style-src': "'self' http://fonts.gstatic.com",
       'media-src': "'self'"
     };
 
-    ENV.APP.KIOSKO = 'http://localhost:3000';
+    ENV.APP.KIOSKO = 'http://barcelonadigital-dev.com:3000';
 
     // ENV.APP.LOG_RESOLVER = true;
     ENV.APP.LOG_ACTIVE_GENERATION = true;
@@ -83,7 +83,7 @@ module.exports = function(environment) {
         },
         'google-oauth2': {
           apiKey: '623929730156-1pspb352389ccipijalrctveo7tc4ur9.apps.googleusercontent.com',
-          redirectUri: 'http://localhost:4200'
+          redirectUri: 'http://barcelonadigital-dev.com:4200'
         }
       }
     };
@@ -91,7 +91,7 @@ module.exports = function(environment) {
     ENV['simple-auth'] = {
       authenticationRoute: 'users.login',
       routeAfterAuthentication: 'collections.main',
-      crossOriginWhitelist: ['http://localhost:3000'],
+      crossOriginWhitelist: ['http://barcelonadigital-dev.com:3000'],
       authorizer: 'authorizer:kiosko'
     };
   }

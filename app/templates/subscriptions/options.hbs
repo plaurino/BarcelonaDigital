@@ -69,7 +69,7 @@
 					</div>
 				</div>
         {{#if selectedSubscription}}
-          {{#unless payments}}
+          {{#unless payment_method}}
 				<div class="paiment-method">
 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
 					    <div class="choise-plan-process">
@@ -85,12 +85,12 @@
            {{/unless}}
         {{/if}}
 
-        {{#if payments}}
+        {{#if payment_method}}
 				<div class="paiment-method">
 					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
 					    <div class="col-md-12 col-xs-12 method">
 						    <ol class="item">
-                {{#with payments}}
+                {{#with payment_method}}
                   <li class="select"><a {{bind-attr href=pp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-paypal"></span>Paypal</button></a></li>
 							    <li class="select"><a {{bind-attr href=mp_payment_link}}><button class="btn btn-primary-bg btn-compra"><span class="btn-option btn-mercado"></span>Mercado Pago</button></a></li>
                  {{/with}}

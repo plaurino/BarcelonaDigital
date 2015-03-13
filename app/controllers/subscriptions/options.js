@@ -3,11 +3,10 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   getSubscriptionPayments: function() {
     var controller = this;
-    controller.set('payments', false);
-    this.store.find('payment', this.get('selectedSubscription'))
+    controller.set('payment_method', false);
+    this.store.find('payment_method', this.get('selectedSubscription'))
       .then(function(data) {
-        console.log(data);
-        controller.set('payments', data);
+        controller.set('payment_method', data);
       });
   }.observes('selectedSubscription'),
   actions: {
@@ -22,5 +21,5 @@ export default Ember.Controller.extend({
     setSubscription6: function() {
       this.set('selectedSubscription', '6');
     }
-  },
+  }
 });

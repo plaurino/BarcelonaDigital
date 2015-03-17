@@ -1,10 +1,3 @@
-{{#if isSending}}
-<div class="alert alert-info" role="alert">
-  <p class="bg-info">
-    Procesando. Aguarde un momento por favor, le estamos creando un lugar en nuestro sistema.
-  </p>
-</div>
-{{else}}
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3 login-extend">
@@ -36,7 +29,7 @@
             {{input type="password" value=confirm_password id="confirm_password" placeholder="Repita su contraseña" name="confirm_password" class="form-control"}}
 
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Registrarte</button>
+          {{kd-ladda-button status=isSending label="Registrarte"}}
         </form>
         <span class="signup text-center block">
           {{#link-to 'users.login'}}Ingresar con una cuenta existente{{/link-to}}
@@ -44,4 +37,3 @@
     </div>
   </div>
 </div>
-{{/if}}

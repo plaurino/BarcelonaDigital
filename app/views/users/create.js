@@ -18,13 +18,13 @@ export default Ember.View.extend({
             "username": value
           },
           success: function (data) {
-            console.log(data);
+            //console.log(data);
             if (data.exist === false) {
               isSuccess = true;
             }
           },
           error: function (xhr, textStatus, errorThrown) {
-            console.log(xhr);
+            //console.log(xhr);
             isSuccess = false;
           }
         });

@@ -20,13 +20,5 @@ export default Ember.Controller.extend(LoginControlllerMixin, {
     authenticateGoogle: function() {
       this.get('session').authenticate('authenticator:google', 'google-oauth2');
     }
-  },
-
-  onLoading: function() {
-    if (this.get('loading')) {
-      this.get('ladda').ladda('start');
-    } else {
-      this.get('ladda').ladda('stop');
-    }
-  }.observes('loading')
+  }
 });

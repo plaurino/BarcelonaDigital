@@ -34,9 +34,7 @@
 										{{input type="password" placeholder="Contraseña" name="InputPassword" value=password class="form-control input-lg"}}
 									</div>
 
-									<button type="submit" class="ladda-button btn btn-block btn-lg btn-primary btn-enter" data-style="zoom-out">
-											<span class="ladda-label">Ingrese</span>
-									</button>
+                  {{kd-ladda-button status=loading label="Ingrese" css_class="ladda-button btn btn-block btn-lg btn-primary btn-enter"}}
 
 									<div class="login-assistance">
 											<span class="forgot-password">{{#link-to 'users.recover'}}¿Olvidó su contraseña?{{/link-to}}</span>

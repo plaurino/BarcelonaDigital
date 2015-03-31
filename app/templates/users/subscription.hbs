@@ -63,12 +63,18 @@
 					</header>
 					<section class="flex col-md-9 rows">
 						<div class="oferta-form w50 column">
-							<form class="form-inline">
+              {{#if redeem-error}}
+                  <label class="error">{{redeem-error}}</span>
+              {{/if}}
+              {{#if redeem-success}}
+                <label class="success">{{redeem-success}}</span>
+              {{/if}}
+							<form class="form-inline form-deals" {{action "redeemVouchers" on="submit"}}>
 								<div class="form-group">
 									<label for="exampleInputNumber" class="sr-only">Pin</label>
-									<input type="text" class="form-control" placeholder="Código o Pin">
+                  {{input type="text" value=code id="code" placeholder="Código o Pin" name="code" class="form-control"}}
 								</div>
-								<button type="submit" class="btn btn-primary">Canjear</button>
+                {{kd-ladda-button status=isSending label="Canjear"}}
 							</form>
 						</div>
 						<div class="oferta-link w50 column">

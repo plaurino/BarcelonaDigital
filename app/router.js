@@ -14,7 +14,7 @@ Router.map(function() {
     this.route('contact-us');
     this.route('profile');
     this.route('questions');
-    this.route('suscription');
+    this.route('subscription');
     //nico-fin
   });
 

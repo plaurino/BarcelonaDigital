@@ -56,6 +56,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         }
       }).done(function (data) {
         if(data.status === 'OK') {
+          console.log(router.get('controller'));
           router.get('controller').timer();
         }
       }).fail(function(data){

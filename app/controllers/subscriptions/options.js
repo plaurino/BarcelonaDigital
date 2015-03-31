@@ -10,9 +10,9 @@ export default Ember.Controller.extend({
       });
   }.observes('selectedSubscription'),
   actions: {
-    setSubscription0: function() {
+    setSubscription1: function() {
       Ember.run(function() {
-        this.set('selectedSubscription', '0');
+        this.set('selectedSubscription', '1');
       }.bind(this));
     },
     setSubscription3: function() {

@@ -18,13 +18,11 @@ export default Ember.View.extend({
             "coupon_code": value
           },
           success: function (data) {
-            console.log(data);
             if (data.valid === true) {
               isSuccess = true;
             }
           },
           error: function (xhr, textStatus, errorThrown) {
-            console.log(xhr);
             isSuccess = false;
           }
         });

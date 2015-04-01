@@ -68,26 +68,52 @@
 	 					</div>
 					</div>
 				</div>
+
         {{#if selectedSubscription}}
+          <div class="vouchers">
+              <h3 class="sub-tittle"><span class="icon-number2 number"></span>Si lo tienes, canjea tu código de descuento</h3>
+              <div class="col-md-12 col-xs-12 method">
+                  {{#if redeem-error}}
+                    <label class="error">{{redeem-error}}</span>
+                  {{/if}}
+                  {{#if redeem-success}}
+                    <label class="success">{{redeem-success}}</span>
+                  {{/if}}
+                  <form class="form-inline form-deals" {{action "redeemVouchers" on="submit"}}>
+                      <div class="form-group">
+                          <label for="exampleInputNumber" class="sr-only">Pin</label>
+                        {{input type="text" value=code id="code" placeholder="Código o Pin" name="code" class="form-control"}}
+                      </div>
+                    {{kd-ladda-button status=isSending label="Canjear"}}
+                  </form>
+                  <span>*Si no tienes codigo de descuento puedes omitir este paso.</span>
+                  <button {{action "skipVouchers"}} class="btn btn-block btn-primary btn-enter">
+                      Omitir
+                  </button>
+              </div>
+          </div>
+        {{/if}}
+
+        {{#if redeemedVoucher}}
           {{#unless payment_method}}
-				<div class="paiment-method">
-					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
-					    <div class="choise-plan-process">
-				        <div class="info text-info bg-info text-center circle">
-				    	      Generando método de pago.
-				    	      <br> <!-- salto para circle -->
- 						        <div class="circle1"></div>
-				            <div class="circle2"></div>
-				           <div class="circle3"></div>
-				         </div>
-					      </div>
-				</div>
+            <div class="paiment-method">
+              <h3 class="sub-tittle"><span class="icon-number3 number"></span>Elige tu método de pago</h3>
+                  <div class="choise-plan-process">
+                    <div class="info text-info bg-info text-center circle">
+                        Generando método de pago.
+                        <br> <!-- salto para circle -->
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                       <div class="circle3"></div>
+                     </div>
+                    </div>
+            </div>
            {{/unless}}
         {{/if}}
 
         {{#if payment_method}}
 				<div class="paiment-method">
-					<h3 class="sub-tittle"><span class="icon-number2 number"></span>Elige tu método de pago</h3>
+					<h3 class="sub-tittle"><span class="icon-number3 number"></span>Elige tu método de pago</h3>
 					    <div class="col-md-12 col-xs-12 method">
 						    <ol class="item">
                 {{#with payment_method}}

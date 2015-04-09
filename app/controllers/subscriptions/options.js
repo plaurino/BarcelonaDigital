@@ -21,6 +21,7 @@ export default Ember.Controller.extend({
     controller.set('payment_method', false);
     controller.set('redeemedVoucher', false);
     controller.checkValidationForm();
+    controller.checkRedeemedVoucher();
   }.observes('selectedSubscription'),
 
   checkValidationForm: function() {
@@ -66,14 +67,18 @@ export default Ember.Controller.extend({
           success: function (data) {
             controller.set('isSending', false);
             controller.set('redeem-error', null);
-            controller.set('redeem-success', 'Congratulations you have redeemed your voucher.');
+            controller.set('redeem-success', 'Perfecto!! Has canjeado tu codigo de descuento.');
             controller.set('redeemedVoucher', true);
+
+            controller.checkRedeemedVoucher();
           },
           error: function (xhr, textStatus, errorThrown) {
             controller.set('isSending', false);
             controller.set('redeem-error', xhr.responseJSON.error);
             controller.set('redeem-success', null);
             controller.set('redeemedVoucher', false);
+
+            controller.checkRedeemedVoucher();
           }
         });
       });
@@ -83,5 +88,16 @@ export default Ember.Controller.extend({
       var controller = this;
       controller.set('redeemedVoucher', true);
     }
+  },
+
+  checkRedeemedVoucher: function(){
+    var controller = this;
+    controller.store.find('redemption-voucher').then(function(redemptionVouchers){
+      if(redemptionVouchers.content.length > 0){
+        var voucher = redemptionVouchers.content[0].get('voucher');
+        controller.set('voucher', voucher.get('coupon_code'));
+        console.log(controller.get('voucher'));
+      }
+    });
   }
 });

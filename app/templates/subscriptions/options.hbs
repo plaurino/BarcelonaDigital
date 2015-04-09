@@ -76,18 +76,18 @@
                   {{#if redeem-error}}
                     <label class="error">{{redeem-error}}</span>
                   {{/if}}
-                  {{#if redeem-success}}
-                    <label class="success">{{redeem-success}}</span>
+                  {{#if voucher}}
+                    Has canjeado tu cupon de descuento <b>"{{voucher}}"</b>, para completar tu suscripcion y aplicar tu descuento ve al siguiente paso.
                   {{/if}}
                   <form class="form-inline form-deals" {{action "redeemVouchers" on="submit"}}>
                       <div class="form-group">
                           <label for="exampleInputNumber" class="sr-only">Pin</label>
-                        {{input type="text" value=code id="code" placeholder="Código o Pin" name="code" class="form-control"}}
+                          {{input type="text" value=code id="code" placeholder="Código o Pin" name="code" class="form-control"}}
+                          {{kd-ladda-button status=isSending label="Canjear"}}
                       </div>
-                    {{kd-ladda-button status=isSending label="Canjear"}}
                   </form>
-                  <span>*Si no tienes codigo de descuento puedes omitir este paso.</span>
-                  <button {{action "skipVouchers"}} class="btn btn-block btn-primary btn-enter">
+                  <span>*Si no tienes codigo de descuento, o ya lo cajeaste puedes omitir este paso.</span>
+                  <button {{action "skipVouchers"}} class="btn btn-block btn-secondary btn-enter">
                       Omitir
                   </button>
               </div>

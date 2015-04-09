@@ -26,8 +26,8 @@ module.exports = function(environment) {
     'default-src': "'none'",
     'script-src': "'self'",
     'font-src': "'self' http://fonts.gstatic.com/",
-    'connect-src': "'self' http://104.236.50.158:4200",
-    'img-src': "'self' http://104.236.50.158:4200",
+    'connect-src': "'self' http://rd3testing.com.ar:4200",
+    'img-src': "'self' http://rd3testing.com.ar:4200",
     'style-src': "'self' http://fonts.gstatic.com",
     'media-src': "'self'"
   };
@@ -35,11 +35,11 @@ module.exports = function(environment) {
   ENV['simple-auth'] = {
     authenticationRoute: 'users.login',
     routeAfterAuthentication: 'collections.main',
-    crossOriginWhitelist: ['http://104.236.50.158:3000'],
+    crossOriginWhitelist: ['http://rd3testing.com.ar:3000'],
     authorizer: 'authorizer:kiosko'
   };
 
-  ENV.APP.KIOSKO = 'http://104.236.50.158:3000';
+  ENV.APP.KIOSKO = 'http://rd3testing.com.ar:3000';
 
   ENV['torii'] = {
     providers: {
@@ -48,7 +48,7 @@ module.exports = function(environment) {
       },
       'google-oauth2': {
         apiKey: '623929730156-1pspb352389ccipijalrctveo7tc4ur9.apps.googleusercontent.com',
-        redirectUri: 'http://104.236.50.158:4200'
+        redirectUri: 'http://rd3testing.com.ar:4200'
       }
     }
   };

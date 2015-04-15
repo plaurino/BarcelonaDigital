@@ -65,19 +65,15 @@ export default Ember.Controller.extend({
             "coupon_code": controller.get('code')
           },
           success: function (data) {
-            controller.set('isSending', false);
             controller.set('redeem-error', null);
             controller.set('redeem-success', 'Perfecto!! Has canjeado tu codigo de descuento.');
             controller.set('redeemedVoucher', true);
-
             controller.checkRedeemedVoucher();
           },
           error: function (xhr, textStatus, errorThrown) {
-            controller.set('isSending', false);
             controller.set('redeem-error', xhr.responseJSON.error);
             controller.set('redeem-success', null);
             controller.set('redeemedVoucher', false);
-
             controller.checkRedeemedVoucher();
           }
         });
@@ -92,12 +88,12 @@ export default Ember.Controller.extend({
 
   checkRedeemedVoucher: function(){
     var controller = this;
-    controller.store.find('redemption-voucher').then(function(redemptionVouchers){
+    controller.store.find('redemption_voucher').then(function(redemptionVouchers){
       if(redemptionVouchers.content.length > 0){
         var voucher = redemptionVouchers.content[0].get('voucher');
         controller.set('voucher', voucher.get('coupon_code'));
-        console.log(controller.get('voucher'));
       }
+      controller.set('isSending', false);
     });
   }
 });

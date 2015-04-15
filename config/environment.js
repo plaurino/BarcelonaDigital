@@ -35,11 +35,11 @@ module.exports = function(environment) {
   ENV['simple-auth'] = {
     authenticationRoute: 'users.login',
     routeAfterAuthentication: 'collections.main',
-    crossOriginWhitelist: ['http://rd3testing.com.ar:3000'],
+    crossOriginWhitelist: ['http://kioskobarcelona-otalegre.rhcloud.com'],
     authorizer: 'authorizer:kiosko'
   };
 
-  ENV.APP.KIOSKO = 'http://rd3testing.com.ar:3000';
+  ENV.APP.KIOSKO = 'http://kioskobarcelona-otalegre.rhcloud.com';
 
   ENV['torii'] = {
     providers: {

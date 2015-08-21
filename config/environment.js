@@ -35,11 +35,11 @@ module.exports = function(environment) {
   ENV['simple-auth'] = {
     authenticationRoute: 'users.login',
     routeAfterAuthentication: 'collections.main',
-    crossOriginWhitelist: ['http://kioskobarcelona-otalegre.rhcloud.com'],
+    crossOriginWhitelist: ['http://rd3testing.com.ar:3000'],
     authorizer: 'authorizer:kiosko'
   };
 
-  ENV.APP.KIOSKO = 'http://kioskobarcelona-otalegre.rhcloud.com';
+  ENV.APP.KIOSKO = 'http://rd3testing.com.ar:3000';
 
   ENV['torii'] = {
     providers: {
@@ -79,7 +79,7 @@ module.exports = function(environment) {
     ENV['torii'] = {
       providers: {
         'facebook-connect': {
-          appId: '759804940768080'
+          appId: '835441696537737'
         },
         'google-oauth2': {
           apiKey: '623929730156-1pspb352389ccipijalrctveo7tc4ur9.apps.googleusercontent.com',

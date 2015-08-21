@@ -29,7 +29,7 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
     } else if(params.paymentId != null) {
 
       //register paypal payment
-      Ember.$.ajax(config.APP.KIOSKO + '/payments/pp-process', {
+      Ember.$.ajax(config.APP.KIOSKO + '/payments/pp-regular-process', {
         "type": 'POST',
         "dataType": 'JSON',
         "data": {
@@ -64,7 +64,26 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
         router.get('controller').timer();
       });
 
+    } else if(params.token !== null) {
+
+      //register paypal recurrent payment
+      Ember.$.ajax(config.APP.KIOSKO + '/payments/pp-recurrent-process', {
+        "type": 'POST',
+        "dataType": 'JSON',
+        "data": {
+          token: params.token
+        }
+      }).done(function (data) {
+        if(data.status === 'OK') {
+          console.log(router.get('controller'));
+          router.get('controller').timer();
+        }
+      }).fail(function(data){
+        Ember.$(document).find('.message').append(data.responseJSON.error);
+        router.get('controller').timer();
+      });
     }
+
     var subscriptions = this.store.find('subscription');
 
     subscriptions.then(function (subscriptions) {

@@ -35,7 +35,7 @@ export default Ember.Controller.extend({
     return this.get('collection_status') === 'null';
   }.property('collection_status'),
   approved: function() {
-    return this.get('collection_status') === 'approved' || this.get('paymentId') != null || this.get('preapproval_id') != null;
+    return this.get('collection_status') === 'approved' || this.get('paymentId') != null || this.get('preapproval_id') != null || (!this.get('paymentId') && !this.get('preapproval_id') && this.get('token') != null);
   }.property('collection_status'),
 
   init: function () {
